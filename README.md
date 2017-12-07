@@ -1,2 +1,7 @@
-# amazon-inspector-user-guide
-The open source version of the Amazon Inspector documentation. You can provide feedback &amp; requests for changes by submitting issues in this repo or by making proposed changes &amp; submitting a pull request.
+## Amazon Inspector User Guide
+
+The open source version of the Amazon Inspector documentation. You can provide feedback & requests for changes by submitting issues in this repo or by making proposed changes & submitting a pull request.
+
+## License Summary
+
+This sample code is made available under a modified MIT license. See the LICENSE file.
