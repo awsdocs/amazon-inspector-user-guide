@@ -44,3 +44,6 @@ You can create up to 50 assessment targets per AWS account\. For more informatio
 1. Use the **Tags**' **Key** and **Value** fields to type the tag key name and key\-value pairs in order to select the EC2 instances that you want to include in this assessment target\.
 
 1. Choose **Save**\.
+
+**Note**  
+For your existing assessment targets, you can use the **Preview Target** button on the **Assessment Targets** page to review all EC2 instances that are currently included in the assessment targets\. For every EC2 instance listed, you can review the hostname, instance ID, IP address, and the status of the Amazon Inspector Agent that is running on the EC2 instance\. The agent status can have the following values: **HEALTHY**, **UNHEALTHY** \(displayed when the agent is reporting that it is not in a healthy state\), and **UNKNOWN** \(displayed when Amazon Inspector is unable to determine whether there is an Amazon Inspector Agent running on the EC2 instance\)\. 

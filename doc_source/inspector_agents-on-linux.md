@@ -80,4 +80,4 @@ For more information about operating systems supported for Amazon Inspector see 
 
    + On Amazon Linux, CentOS, and Red Hat, run sudo yum remove 'AwsAgent\*'
 
-   + On Ubuntu Server, run sudo apt\-get remove 'awsagent\*'
+   + On Ubuntu Server, run sudo apt\-get purge 'awsagent\*'

@@ -53,6 +53,9 @@ For more information, see [Amazon Inspector Service Limits](inspector_limits.md)
 1. For **Name**, type a name for your assessment template\.
 
 1. For **Target name**, choose an assessment target to analyze\.
+**Note**  
+While in the process of creating a new assessment template, you can use the **Preview Target** button on the **Assessment Templates** page to review all EC2 instances that are currently included in the assessment target that you want to include in this template\. For every EC2 instance listed, you can review the hostname, instance ID, IP address, and the status of the Amazon Inspector Agent that is running on the EC2 instance\. The agent status can have the following values: **HEALTHY**, **UNHEALTHY** \(displayed when the agent is reporting that it is not in a healthy state\), and **UNKNOWN** \(displayed when Amazon Inspector is unable to determine whether there is an Amazon Inspector Agent running on the EC2 instance\)\.   
+You can also use the **Preview Target** button on the **Assessment Templates** page to review EC2 instances that make up assessment targets included in your previously created templates\.
 
 1. For **Rules packages**, choose one or more rules packages to include in your assessment template\.
 
@@ -170,9 +173,9 @@ Amazon Simple Notification Service \(Amazon SNS\) is a web service that sends me
 
       + for Asia Pacific \(Sydney\) \- *arn:aws:iam::454640832652:root*
 
-      + for Asia Pacific \(Tokyo\) \- arn:aws:iam::406045910587:root
+      + for Asia Pacific \(Tokyo\) \- *arn:aws:iam::406045910587:root*
 
-      + for EU \(Frankfurt\) \- *arn:aws:iam:: 537503971621:root*
+      + for EU \(Frankfurt\) \- *arn:aws:iam::537503971621:root*
 
       + for EU \(Ireland\) \- *arn:aws:iam::357557129151:root*
 

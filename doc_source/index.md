@@ -1,7 +1,7 @@
 # Amazon Inspector User Guide
 
 -----
-*****Copyright &copy; 2017 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -40,7 +40,9 @@ Amazon's trademarks and trade dress may not be used in
 + [Rules Packages Availability Across Supported Operating Systems](inspector_rule-packages_across_os.md)
 + [Logging Amazon Inspector API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
 + [Monitoring Amazon Inspector Using CloudWatch](using-cloudwatch.md)
++ [Configuring Amazon Inspector Using AWS CloudFormation](inspector_cloudformation-integration.md)
 + [Authentication and Access Control for Amazon Inspector](inspector-auth-and-access-control.md)
    + [Overview of Managing Access Permissions to Your Amazon Inspector Resources](access-control-overview.md)
    + [Using Identity-based Policies (IAM Policies) for Amazon Inspector](access-control-identity-based.md)
    + [Amazon Inspector API Permissions: Actions, Resources, and Conditions Reference](inspector-api-permissions-ref.md)
++ [Appendix - Amazon Inspector Rules Packages' ARNs](inspector_rules-arns.md)

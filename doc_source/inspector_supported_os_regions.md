@@ -26,7 +26,9 @@ In this release of Amazon Inspector, your assessment targets can consist only of
 + CentOS \(6\.2 \- 6\.9, 7\.2 \- 7\.4\)
 
 **Important**  
-Follow this link to view a list of kernel versions that are compatible with the Amazon Inspector Agent running on Amazon Linux, Ubuntu, Red Hat Enterprise Linux, and CentOS: [https://s3\.amazonaws\.com/aws\-agent\.us\-east\-1/linux/support/supported\_versions\.json](https://s3.amazonaws.com/aws-agent.us-east-1/linux/support/supported_versions.json)\. 
+The following list contains all kernel versions that are compatible with the Amazon Inspector Agent running on Linux, Ubuntu, Red Hat Enterprise Linux, and CentOS: [https://s3\.amazonaws\.com/aws\-agent\.us\-east\-1/linux/support/supported\_versions\.json](https://s3.amazonaws.com/aws-agent.us-east-1/linux/support/supported_versions.json)\.  
+You can run a successful Amazon Inspector assessment of an EC2 instance with a Linux\-based OS using either the CVE, CIS, or Security Best Practices rules packages even if your instance does not have a kernel version that is included in this list\.  
+To run a successful Amazon Inspector assessment of an EC2 instance with a Linux\-based OS using the [Runtime Behavior Analysis](inspector_runtime-behavior-analysis.md) rules package, your instance must have a kernel version that is included in this list\. If your instance has a kernel version that is not compatible with the Amazon Inspector Agent, the Runtime Behavior Analysis rules package assessing that EC2 instance results in only one informational finding informing you that the kernel version of your EC2 instance is not supported\. 
 
 ## Supported Windows\-based Operating Systems<a name="inspector_supported-win-os"></a>
 
@@ -40,8 +42,6 @@ In this release of Amazon Inspector, your assessment targets can consist only of
 
 ## Supported Regions<a name="inspector_supported-regions"></a>
 
-At this time, Amazon Inspector supports assessment services for EC2 instances in only the following AWS regions:
-
 + Asia Pacific \(Mumbai\)
 
 + Asia Pacific \(Seoul\)
@@ -50,6 +50,8 @@ At this time, Amazon Inspector supports assessment services for EC2 instances in
 
 + Asia Pacific \(Tokyo\)
 
++ EU \(Frankfurt\)
+
 + EU \(Ireland\)
 
 + US East \(Northern Virginia\)
@@ -57,5 +59,3 @@ At this time, Amazon Inspector supports assessment services for EC2 instances in
 + US West \(Northern California\)
 
 + US West \(Oregon\)
-
-Amazon Inspector is hosted within AWS regions behind a public endpoint\. All regions are isolated from each other, and the telemetry and findings for all assessments performed within a region remain in that region and are not distributed by the service to other Amazon Inspector locations\. 

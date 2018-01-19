@@ -52,7 +52,7 @@ Policies attached to an IAM identity are referred to as *identity\-based* polici
 
 
 + [Identity\-Based Policies \(IAM Policies\)](#access-control-manage-access-identity-based)
-+ [Resource\-Based Policies](#access-control-manage-access-resource-based)
++ [id="access\-control\-manage\-access\-resource\-based\.title">Resource\-Based Policies](#access-control-manage-access-resource-based)
 
 ### Identity\-Based Policies \(IAM Policies\)<a name="access-control-manage-access-identity-based"></a>
 
@@ -89,7 +89,7 @@ The following is an example policy that grants permissions for the `inspector:Li
 
 For more information about using identity\-based policies with Amazon Inspector, see [Using Identity\-based Policies \(IAM Policies\) for Amazon Inspector](access-control-identity-based.md)\. For more information about users, groups, roles, and permissions, see [Identities \(Users, Groups, and Roles\)](http://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\. 
 
-### Resource\-Based Policies<a name="access-control-manage-access-resource-based"></a>
+### id="access\-control\-manage\-access\-resource\-based\.title">Resource\-Based Policies<a name="access-control-manage-access-resource-based"></a>
 
 Other services, such as Amazon S3, also support resource\-based permissions policies\. For example, you can attach a policy to an S3 bucket to manage access permissions to that bucket\. Amazon Inspector doesn't support resource\-based policies\. 
 
