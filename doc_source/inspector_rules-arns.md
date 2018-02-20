@@ -5,6 +5,7 @@
 
 + [US West \(Oregon\)](#us-west-2)
 + [US East \(N\. Virginia\)](#us-east-1)
++ [US East \(Ohio\)](#us-east-2)
 + [US West \(N\. California\)](#us-west-1)
 + [Asia Pacific \(Mumbai\)](#ap-south-1)
 + [Asia Pacific \(Sydney\)](#ap-southeast-2)
@@ -32,6 +33,16 @@
 | CIS Operating System Security Configuration Benchmarks | arn:aws:inspector:us\-east\-1:316112463485:rulespackage/0\-rExsr2X8 | 
 | Security Best Practices | arn:aws:inspector:us\-east\-1:316112463485:rulespackage/0\-R01qwB5Q | 
 | Runtime Behavior Analysis | arn:aws:inspector:us\-east\-1:316112463485:rulespackage/0\-gBONHN9h | 
+
+## US East \(Ohio\)<a name="us-east-2"></a>
+
+
+| Rules package name | ARN | 
+| --- | --- | 
+| Common Vulnerabilities and Exposures | arn:aws:inspector:us\-east\-2:646659390643:rulespackage/0\-JnA8Zp85 | 
+| CIS Operating System Security Configuration Benchmarks | arn:aws:inspector:us\-east\-2:646659390643:rulespackage/0\-m8r61nnh | 
+| Security Best Practices | arn:aws:inspector:us\-east\-2:646659390643:rulespackage/0\-AxKmMHPX | 
+| Runtime Behavior Analysis | arn:aws:inspector:us\-east\-2:646659390643:rulespackage/0\-UCYZFKPV | 
 
 ## US West \(N\. California\)<a name="us-west-1"></a>
 

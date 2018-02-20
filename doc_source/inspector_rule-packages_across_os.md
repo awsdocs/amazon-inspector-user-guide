@@ -18,3 +18,4 @@ The following table describes Amazon Inspector rules packages' availability acro
 |  Windows Server 2012 R2  |  Supported  |  Supported  |   |  Supported  | 
 |  Windows Server 2012  |  Supported  |  Supported  |   |  Supported  | 
 |  Windows Server 2008 R2  |  Supported  |  Supported  |   |  Supported  | 
+|  Windows Server 2016  |  Supported  |   |   |  Supported  | 

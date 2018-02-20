@@ -36,6 +36,9 @@ We highly recommend that you modify the **agent\.cfg** file only with the guidan
 
 ## To configure proxy support for Amazon Inspector Agents<a name="inspector-agent-proxy"></a>
 
+**Important**  
+Proxy support for Amazon Inspector Agents is NOT supported on EC2 instances that are running Windows Server 2016 operating system\.
+
 Proxy support for Amazon Inspector Agents is achieved through the use of the WinHTTP proxy\. To set up WinHTTP proxy using the `netsh` utility see: [https://technet\.microsoft\.com/en\-us/library/cc731131%28v=ws\.10%29\.aspx](https://technet.microsoft.com/en-us/library/cc731131%28v=ws.10%29.aspx)\.
 
 Complete one of the following procedures:

@@ -40,6 +40,8 @@ In this release of Amazon Inspector, your assessment targets can consist only of
 
 + Windows Server 2012 R2
 
++ Windows Server 2016
+
 ## Supported Regions<a name="inspector_supported-regions"></a>
 
 + Asia Pacific \(Mumbai\)
@@ -55,6 +57,8 @@ In this release of Amazon Inspector, your assessment targets can consist only of
 + EU \(Ireland\)
 
 + US East \(Northern Virginia\)
+
++ US East \(Ohio\)
 
 + US West \(Northern California\)
 

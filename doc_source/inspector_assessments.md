@@ -181,6 +181,8 @@ Amazon Simple Notification Service \(Amazon SNS\) is a web service that sends me
 
       + for US East \(Northern Virginia\) \- *arn:aws:iam::316112463485:root*
 
+      + for US East \(Ohio\) \- *arn:aws:iam::646659390643:root*
+
       + for US West \(Northern California\) \- *arn:aws:iam::166987590008:root*
 
       + for US West \(Oregon\) \- *arn:aws:iam::758058086616:root*
