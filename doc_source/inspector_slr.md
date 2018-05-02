@@ -15,11 +15,9 @@ For more information, see [Auto\-create a service\-linked role to grant Amazon I
 Amazon Inspector uses the service\-linked role named **AWSServiceRoleForAmazonInspector**\.
 
 The AWSServiceRoleForAmazonInspector service\-linked role trusts the following services to assume the role:
-
 + `Amazon Inspector`
 
 The role permissions policy allows Amazon Inspector to complete the following actions on the specified resources:
-
 + Action: `iam:CreateServiceLinkedRole` on `arn:aws:iam::*:role/aws-service-role/inspector.amazonaws.com/AWSServiceRoleForAmazonInspector`
 
 For the `AWSServiceRoleForAmazonInspector` service\-linked role to be successfully created, the IAM identity \(user, role, group\) with which you use Amazon Inspector, must have the required permissions\. To grant the required permissions, attach the **AmazonInspectorFullAccess** managed policy to this IAM user, group, or role\. For more information, see [AWS Managed \(Predefined\) Policies for Amazon Inspector](access-control-identity-based.md#UsingWithInspector_IAM_AccessControl_ManagedPolicies)\. 
@@ -33,19 +31,15 @@ You don't need to manually create the `AWSServiceRoleForAmazonInspector` service
 The `AWSServiceRoleForAmazonInspector` service\-linked role is created automatically\. The following sections describe the details of auto\-generating and using the `AWSServiceRoleForAmazonInspector` service\-linked role when you get started with Amazon Inspector for the first time or when you already have Amazon Inspector running in your AWS account\. 
 
 ### If you are getting started with Amazon Inspector for the first time<a name="CreateRoleFirstRun1"></a>
-
 + The `AWSServiceRoleForAmazonInspector` service\-linked role is created automatically when you go through the **Get Started with Amazon Inspector** wizard in the console or when you run the [CreateAssessmentTarget](http://docs.aws.amazon.com/inspector/latest/APIReference/API_CreateAssessmentTarget.html) API operation\.
-
 + The `AWSServiceRoleForAmazonInspector` service\-linked role is created for your AWS account only in the region to which you are currently signed in\. It grants Amazon Inspector access to the resources in your AWS account only in this region\. If you then use the same AWS account to go through the **Get Started with Amazon Inspector** console wizard or run the [CreateAssessmentTarget](http://docs.aws.amazon.com/inspector/latest/APIReference/API_CreateAssessmentTarget.html) API operation in other regions, the same service\-linked role that is already created in your AWS account is applied in these other regions and grants Amazon Inspector access to the resources in your AWS account in these other regions\. 
 
 ### If you already have Amazon Inspector running in your AWS account<a name="CreateRoleExisting1"></a>
-
 + If you already have Amazon Inspector running in your AWS account, the IAM role that grants Amazon Inspector access to your resources already exists in your AWS account\. In this case, the `AWSServiceRoleForAmazonInspector` service\-linked role is auto\-created when you create a new assessment target or a new assessment template \(either through the Amazon Inspector console or the API operations\)\. This newly created service\-linked role replaces the previously created IAM role that up until now granted Amazon Inspector access to your resources\.
 
   You can also create the `AWSServiceRoleForAmazonInspector` service\-linked role manually by choosing the **Manage Amazon Inspector service\-linked role** link in the **Accounts Setting** section in the Inspector's **Dashboard** page\. This newly created service\-linked role replaces the previously created IAM role that up until now granted Amazon Inspector access to your resources\.
 **Note**  
 This previously created IAM role is not deleted\. It remains intact, but it is no longer used to grant Amazon Inspector access to your resources\. You can use the IAM console to further manage or delete this IAM role\.
-
 + The `AWSServiceRoleForAmazonInspector` service\-linked role is created for your AWS account only in the region to which you are currently signed in\. It grants Amazon Inspector access to the resources in your AWS account only in this region\. If you then use the same AWS account to create a new assessment target or a new assessment template for your Amazon Inspector service running in other regions, the same service\-linked role that is already created in your AWS account is applied and grants Amazon Inspector access to the resources in your AWS account in these other regions\. 
 
 You can also use the IAM console to create a service\-linked role with the **Inspector** use case\. In the IAM CLI or the IAM API, create a service\-linked role with the `Amazon Inspector` service name\. For more information, see [Creating a Service\-Linked Role](http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\. 
@@ -64,7 +58,6 @@ If you no longer need to use a feature or service that requires a service\-linke
 If the Amazon Inspector service is using the role when you try to delete the resources, then the deletion might fail\. If that happens, wait for a few minutes and try the operation again\.
 
 **To delete Amazon Inspector resources used by the AWSServiceRoleForAmazonInspector**
-
 + Delete your assessment targets for this AWS account in all the regions where you have Amazon Inspector running\. For more information, see [Amazon Inspector Assessment Targets](inspector_applications.md)\.
 
 **To manually delete the service\-linked role using IAM**

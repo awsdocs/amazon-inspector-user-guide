@@ -13,19 +13,13 @@ AWS is responsible for protecting the global infrastructure that runs all the se
 For more information, see [Amazon Inspector Terminology and Concepts](inspector_concepts.md)\.
 
 ## Benefits of Amazon Inspector<a name="InspectorBenefits"></a>
-
 + Amazon Inspector enables you to quickly and easily assess the security of your AWS resources for forensics, troubleshooting, or active auditing purposes at your own pace, either as you progress through the development of your infrastructures or on a regular basis in a stable production environment\.
-
 + Amazon Inspector enables you to focus on more complex security problems by offloading the overall security assessment of your infrastructure to this automated service\.
-
 + By using Amazon Inspector, you can gain deeper understanding of your AWS resources because Amazon Inspector findings are produced through the analysis of the real activity and configuration data of your AWS resources\.
 
 ## Features of Amazon Inspector<a name="InspectorFeatures"></a>
-
 + **Configuration Scanning and Activity Monitoring Engine** \- Amazon Inspector provides an engine that analyzes system and resource configuration and monitors activity to determine what an assessment target looks like, how it behaves, and its dependent components\. The combination of this telemetry provides a complete picture of the assessment target and its potential security or compliance issues\. 
-
 + **Built\-in Content Library** \- Amazon Inspector incorporates a built\-in library of rules and reports\. These include checks against best practices, common compliance standards and vulnerabilities\. These checks include detailed recommended steps for resolving potential security issues\. 
-
 + **Automatable via API** \- Amazon Inspector is fully automatable via an API\. This allows organizations to incorporate security testing into the development and design process, including selecting, executing, and reporting the results of those tests\. 
 
 ## Amazon Inspector Pricing<a name="InspectorPricing"></a>

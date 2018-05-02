@@ -2,9 +2,13 @@
 
 The following table describes Amazon Inspector rules packages' availability across supported operating systems that you can run on the EC2 instances included in your assessment targets\.
 
+**Note**  
+For more information about supported operating systems, see [Amazon Inspector Supported Operating Systems and Regions](inspector_supported_os_regions.md)\.
+
 
 | Supported Operating Systems | Common Vulnerabilities and Exposures | CIS Benchmarks | Security Best Practices | Runtime Behavior Analysis | 
 | --- | --- | --- | --- | --- | 
+|  Amazon Linux 2 2017\.12  |  Supported  |   |  Supported  |  Supported  | 
 |  Amazon Linux 2017\.09  |  Supported  |   |  Supported  |  Supported  | 
 |  Amazon Linux 2017\.03  |  Supported  |   |  Supported  |  Supported  | 
 |  Amazon Linux 2016\.09  |  Supported  |   |  Supported  |  Supported  | 
@@ -18,4 +22,4 @@ The following table describes Amazon Inspector rules packages' availability acro
 |  Windows Server 2012 R2  |  Supported  |  Supported  |   |  Supported  | 
 |  Windows Server 2012  |  Supported  |  Supported  |   |  Supported  | 
 |  Windows Server 2008 R2  |  Supported  |  Supported  |   |  Supported  | 
-|  Windows Server 2016  |  Supported  |   |   |  Supported  | 
+|  Windows Server 2016 Base  |  Supported  |   |   |  Supported  | 

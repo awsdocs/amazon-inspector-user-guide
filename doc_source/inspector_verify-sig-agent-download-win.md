@@ -8,7 +8,7 @@ If after running the steps in this topic, you determine that the software for th
 
 To verify the validity of the downloaded Amazon Inspector Agent installation script on Windows\-based operating systems, you must make sure that the thumbprint of its Amazon Services LLC signer certificate is equal to this value:
 
-**88 80 f2 07 68 55 f1 5a 17 fe ec 95 65 15 99 f3 46 0e db 8b**
+**5C 2C B5 5A 9A B9 B1 D6 3F F4 1B 0D A2 76 F2 A9 2B 09 A8 6A**
 
 To verify this value, perform the following procedure: 
 
@@ -23,11 +23,9 @@ To verify this value, perform the following procedure:
 1. Choose the **Details** tab and then choose **All** in the **Show:** dropdown list, if not already selected\.
 
 1. Scroll down until you see the **Thumbprint** field and then choose **Thumbprint**\. This will display the entire thumbprint value in the lower window\.
-
    + If the thumbprint value in the lower window is identical to the following value:
 
-     **88 80 f2 07 68 55 f1 5a 17 fe ec 95 65 15 99 f3 46 0e db 8b**
+     **5C 2C B5 5A 9A B9 B1 D6 3F F4 1B 0D A2 76 F2 A9 2B 09 A8 6A**
 
      then your downloaded Amazon Inspector Agent installation script is authentic and can be safely installed\.
-
    + If the thumbprint value in the lower details window is NOT identical to the value above, do NOT run `AWSAgentInstall.exe`\. 

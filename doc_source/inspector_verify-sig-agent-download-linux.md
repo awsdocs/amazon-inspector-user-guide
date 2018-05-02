@@ -10,7 +10,7 @@ Amazon Inspector Agent files for Linux\-based operating systems are signed using
 
 The first step is to establish trust with the software publisher: Download the public key of the software publisher, check that the owner of the public key is who they claim to be, and then add the public key to your *keyring*\. Your keyring is a collection of known public keys\. After you establish the authenticity of the public key, you can use it to verify the signature of the application\.
 
-
+**Topics**
 + [Install the GPG Tools](#inspector_verify-signature-of-agent-download-install-tools)
 + [Authenticate and Import the Public Key](#inspector_verify-signature-of-agent-download-authenticate-import-public-key)
 + [Verify the Signature of the Package](#inspector_verify-signature-of-agent-package)
@@ -20,11 +20,9 @@ The first step is to establish trust with the software publisher: Download the p
 If your operating system is Linux or Unix, the GPG tools are likely already installed\. To test whether the tools are installed on your system, type gpg at a command prompt\. If the GPG tools are installed, you see a GPG command prompt\. If the GPG tools are not installed, you see an error stating that the command cannot be found\. You can install the GnuPG package from a repository\. 
 
 **To install GPG tools on Debian\-based Linux**
-
 + From a terminal, run the following command: apt\-get install gnupg\.
 
 **To install GPG tools on Red Hat–based Linux**
-
 + From a terminal, run the following command: yum install gnupg\.
 
 ## Authenticate and Import the Public Key<a name="inspector_verify-signature-of-agent-download-authenticate-import-public-key"></a>
@@ -34,9 +32,7 @@ The next step in the process is to authenticate the Amazon Inspector public key 
 **To authenticate and import the Amazon Inspector public key**
 
 1. Obtain a copy of our public GPG build key by doing one of the following:
-
    + Download from [https://d1wk0tztpsntt1\.cloudfront\.net/linux/latest/inspector\.gpg](https://d1wk0tztpsntt1.cloudfront.net/linux/latest/inspector.gpg)\.
-
    + Copy the key from the following text and paste it into a file called `inspector.key`\. Be sure to include everything that follows:
 
      ```
@@ -136,9 +132,7 @@ After you've installed the GPG tools, authenticated and imported the Amazon Insp
    If the output includes the phrase `BAD signature`, check whether you performed the procedure correctly\. If you continue to get this response, contact Amazon Web Services and do not run the installation file that you downloaded previously\.
 
 The following are details about the warnings you might see: 
-
 + **WARNING: This key is not certified with a trusted signature\! There is no indication that the signature belongs to the owner\. **This refers to your personal level of trust in your belief that you possess an authentic public key for Amazon Inspector\. In an ideal world, you would visit an Amazon Web Services office and receive the key in person\. However, more often you download it from a website\. In this case, the website is an Amazon Web Services web site\. 
-
 + **gpg: no ultimately trusted keys found\.** This means that the specific key is not "ultimately trusted" by you \(or by other people whom you trust\)\.
 
 For more information, see [http://www\.gnupg\.org](http://www.gnupg.org)\.

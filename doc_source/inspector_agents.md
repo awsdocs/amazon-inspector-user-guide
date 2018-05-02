@@ -4,7 +4,7 @@ To assess the security of the EC2 instances that make up your Amazon Inspector a
 
 For more information about how to install, uninstall, and reinstall the Amazon Inspector Agent, how to verify whether the installed agent is running, and how to configure proxy support for the Amazon Inspector Agents, see [Working with Amazon Inspector Agents on Linux\-based Operating Systems](inspector_agents-on-linux.md) and [Working with Amazon Inspector Agents on Windows\-based Operating Systems](inspector_agents-on-win.md)\.
 
-
+**Topics**
 + [Amazon Inspector Agent Privileges](#agent-privileges)
 + [Network and Amazon Inspector Agent Security](#agent-security)
 + [Amazon Inspector Agent Updates](#agent-updates)
@@ -54,7 +54,5 @@ For information about Amazon Inspector Agent limits, see [Amazon Inspector Servi
 ## Amazon Inspector Agent Public Licensing<a name="agent-license"></a>
 
 The Amazon Inspector Agent used in conjunction with Amazon Inspector, utilizes a Kernel module \(amznmon64\) as a component of the overall agent\. This Kernel module uses a general public license \([GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)\)\. The module source code and licensing information are publicly available and can be accessed at: 
-
 + Source code: [https://s3\.amazonaws\.com/aws\-agent\.us\-east\-1/linux/support/AwsAgentKernelModule\.tar\.gz](https://s3.amazonaws.com/aws-agent.us-east-1/linux/support/AwsAgentKernelModule.tar.gz)
-
 + Signature file: [https://s3\.amazonaws\.com/aws\-agent\.us\-east\-1/linux/support/AwsAgentKernelModule\.tar\.gz\.sig](https://s3.amazonaws.com/aws-agent.us-east-1/linux/support/AwsAgentKernelModule.tar.gz.sig)

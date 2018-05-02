@@ -5,7 +5,7 @@ Sign in to your EC2 instance running a Windows\-based operating system and run a
 **Note**  
 The following commands are functional in all regions that are supported by Amazon Inspector\.
 
-
+**Topics**
 + [To stop or start the Amazon Inspector Agent or verify that the Amazon Inspector Agent is running](#stop-start-windows)
 + [To modify Amazon Inspector Agent settings](#inspector-agent-modify-settings)
 + [To configure proxy support for Amazon Inspector Agents](#inspector-agent-proxy)
@@ -35,9 +35,6 @@ Once the Amazon Inspector Agent is installed and running on your EC2 instance, y
 We highly recommend that you modify the **agent\.cfg** file only with the guidance of AWS Support\.
 
 ## To configure proxy support for Amazon Inspector Agents<a name="inspector-agent-proxy"></a>
-
-**Important**  
-Proxy support for Amazon Inspector Agents is NOT supported on EC2 instances that are running Windows Server 2016 operating system\.
 
 Proxy support for Amazon Inspector Agents is achieved through the use of the WinHTTP proxy\. To set up WinHTTP proxy using the `netsh` utility see: [https://technet\.microsoft\.com/en\-us/library/cc731131%28v=ws\.10%29\.aspx](https://technet.microsoft.com/en-us/library/cc731131%28v=ws.10%29.aspx)\.
 

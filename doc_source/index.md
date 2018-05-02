@@ -20,7 +20,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Amazon Inspector Supported Operating Systems and Regions](inspector_supported_os_regions.md)
 + [Setting up Amazon Inspector](inspector_settingup.md)
    + [Using Service-Linked Roles for Amazon Inspector](inspector_slr.md)
-+ [Amazon Inspector Quickstart Walkthrough - Amazon Linux](inspector_quickstart.md)
++ [Amazon Inspector Quickstart Walkthrough - Red Hat Enterprise Linux](inspector_quickstart.md)
 + [Amazon Inspector Quickstart Walkthrough - Ubuntu Server](inspector_quickstart_ubuntu.md)
 + [Amazon Inspector Agents](inspector_agents.md)
    + [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)

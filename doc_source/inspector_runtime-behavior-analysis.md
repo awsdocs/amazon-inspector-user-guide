@@ -4,13 +4,12 @@ These rules analyze the behavior of your instances during an assessment run, and
 
 For more information, see [Rules Packages Availability Across Supported Operating Systems](inspector_rule-packages_across_os.md)\.
 
-
+**Topics**
 + [Insecure Client Protocols \(Login\)](#insecure-client-protocols-login)
 + [Insecure Client Protocols \(General\)](#insecure-client-protocols-general)
 + [Unused Listening TCP Ports](#unused-tcp-ports)
 + [Insecure Server Protocols](#insecure-protocols)
 + [Software Without DEP](#dep-os)
-+ [Software Without Stack Cookies](#stack-cookies-enabled)
 + [Root Process with Insecure Permissions](#root-process-with-insecure-permissions)
 
 ## Insecure Client Protocols \(Login\)<a name="insecure-client-protocols-login"></a>
@@ -21,7 +20,7 @@ This rule detects a client's use of insecure protocols to log in to remote machi
 In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 This rule generates findings for the EC2 instances that are running either Linux\-based or Windows\-based operating systems\.
 
-### Severity: Medium<a name="insecure-client-protocols-login-severity"></a>
+### Severity: [Medium](inspector_rule-packages.md#SeverityLevels)<a name="insecure-client-protocols-login-severity"></a>
 
 ### Finding<a name="insecure-client-protocols-login-finding"></a>
 
@@ -39,7 +38,7 @@ This rule detects a client's use of insecure protocols\.
 In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 This rule generates findings for the EC2 instances that are running either Linux\-based or Windows\-based operating systems\.
 
-### Severity: Low<a name="insecure-client-protocols-general-severity"></a>
+### Severity: [Low](inspector_rule-packages.md#SeverityLevels)<a name="insecure-client-protocols-general-severity"></a>
 
 ### Finding<a name="insecure-client-protocols-general-finding"></a>
 
@@ -57,7 +56,7 @@ This rule detects listening TCP ports that may not be required by the assessment
 In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 This rule generates findings for the EC2 instances that are running either Linux\-based or Windows\-based operating systems\.
 
-### Severity: Informational<a name="unused-tcp-ports-severity"></a>
+### Severity: [Informational](inspector_rule-packages.md#SeverityLevels)<a name="unused-tcp-ports-severity"></a>
 
 ### Finding<a name="unused-tcp-ports-finding"></a>
 
@@ -75,7 +74,7 @@ This rule helps determine whether your EC2 instances allow support for insecure 
 In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 This rule generates findings for the EC2 instances that are running either Linux\-based or Windows\-based operating systems\.
 
-### Severity: Informational<a name="insecure-protocols-severity"></a>
+### Severity: [Informational](inspector_rule-packages.md#SeverityLevels)<a name="insecure-protocols-severity"></a>
 
 ### Finding<a name="insecure-protocols-finding"></a>
 
@@ -84,15 +83,10 @@ An EC2 instance in your assessment target is configured to support insecure prot
 ### Resolution<a name="insecure-protocols-resolution"></a>
 
 We recommend that you disable insecure protocols that are supported on an EC2 instance in your assessment target and replace them with secure alternatives as listed below:
-
 + Disable Telnet, rsh, and rlogin and replace them with SSH\. Where this is not possible, you should ensure that the insecure service is protected by appropriate network access controls such as VPC network ACLs and EC2 security groups\.
-
 + Replace FTP with SCP or SFTP where possible\. Where this is not possible, you should ensure that the FTP server is protected by appropriate network access controls such as VPC network ACLs and EC2 security groups\.
-
 + Replace HTTP with HTTPS where possible\. For more information specific to the web server in question, see http://nginx\.org/en/docs/http/configuring\_https\_servers\.html and http://httpd\.apache\.org/docs/2\.4/ssl/ssl\_howto\.html\.
-
 + Disable IMAP, POP3, and SMTP services if not required\. If required, we recommend that these email protocols are used with encrypted protocols such as TLS\.
-
 + Disable SNMP service if not required\. If required, replace SNMP v1and v2 with the more secure SNMP v3, which uses encrypted communication\.
 
 ## Software Without DEP<a name="dep-os"></a>
@@ -103,7 +97,7 @@ This rule detects the presence of third\-party software that is compiled without
 In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 During an assessment run, this rule generates findings **only** for the EC2 instances that are running Linux\-based operating systems\. This rule does NOT generate findings for EC2 instances that are running Windows\-based operating systems\.
 
-### Severity: Medium<a name="dep-os-severity"></a>
+### Severity: [Medium](inspector_rule-packages.md#SeverityLevels)<a name="dep-os-severity"></a>
 
 ### Finding<a name="dep-os-finding"></a>
 
@@ -113,24 +107,6 @@ There are executable files on an EC2 instance in your assessment target that do 
 
 It is recommended that you uninstall this software from your assessment target if you are not using it, or contact the vendor to get an updated version of this software with DEP enabled\.
 
-## Software Without Stack Cookies<a name="stack-cookies-enabled"></a>
-
-This rule detects the presence of third\-party software that is compiled without support for stack cookies\. Stack cookies increase system security by defending against stack\-based buffer overflow and other memory corruption attacks\.
-
-**Important**  
-In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
-During an assessment run, this rule generates findings **only** for the EC2 instances that are running Linux\-based operating systems\. This rule does NOT generate findings for EC2 instances that are running Windows\-based operating systems\.
-
-### Severity: Medium<a name="stack-cookies-enabled-severity"></a>
-
-### Finding<a name="stack-cookies-enabled-finding"></a>
-
-There are executable files running on your EC2 instance that do not support stack cookies\.
-
-### Resolution<a name="stack-cookies-enabled-resolution"></a>
-
-It is recommended that you uninstall this software from your assessment target if you are not using it, or contact the vendor to get an updated version of this software with stack cookies enabled\.
-
 ## Root Process with Insecure Permissions<a name="root-process-with-insecure-permissions"></a>
 
 This rule helps detect root processes that load modules that can be modified by unauthorized users\.
@@ -139,7 +115,7 @@ This rule helps detect root processes that load modules that can be modified by 
 In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 During an assessment run, this rule generates findings **only** for the EC2 instances that are running Linux\-based operating systems\. This rule does NOT generate findings for EC2 instances that are running Windows\-based operating systems\.
 
-### Severity: High<a name="root-process-with-insecure-permissions-severity"></a>
+### Severity: [High](inspector_rule-packages.md#SeverityLevels)<a name="root-process-with-insecure-permissions-severity"></a>
 
 ### Finding<a name="root-process-with-insecure-permissions-finding"></a>
 

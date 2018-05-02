@@ -16,11 +16,8 @@ For example, calls to the **CreateAssessmentTarget**, **CreateAssessmentTemplate
 For the Amazon Inspector integration with CloudTrail, for the List\* and Describe\* APIs, for example, ListAssessmentTargets or `DescribeAssessmentTargets`, only the request information is logged; for the Create\*, Start\*, Stop\*, and all other APIs, for example, `CreateResourceGroup`, both the request and response information is logged\.
 
 Every log entry contains information about who generated the request\. The user identity information in the log entry helps you determine the following: 
-
 + Whether the request was made with root or IAM user credentials
-
 + Whether the request was made with temporary security credentials for a role or federated user
-
 + Whether the request was made by another AWS service
 
 For more information, see the [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.

@@ -5,17 +5,11 @@ Before you follow the instructions in this walkthrough, we recommend that you ge
 This walkthrough is designed for a first\-time user and includes all the tasks, including prerequisite tasks, for creating an assessment target, assessment template, and assessment run\.
 
 This walkthrough is designed to demonstrate how to use Amazon Inspector to analyze the behavior of the EC2 instances that run the Ubuntu Server 16\.04 LTS operating system\.
-
 + [Set Up Amazon Inspector](inspector_quickstart.md#setupinspector)\. This is the first\-run experience, including completing all the pre\-requisite tasks via the Amazon Inspector console\.
-
 + [Prepare Your Assessment Target for the Assessment Run](#prepareapplication_ubuntu)
-
 + [Create an Assessment Target](#createassessmenttarget_ubuntu)
-
 + [Create and Run an Assessment Template](#createassessmenttemplate_ubuntu)
-
 + [Locate and Analyze Generated Findings](#analyzefinding_ubuntu)
-
 + [Apply the Recommended Fix to Your Assessment Target](#upgradeapplication_ubuntu)
 
 ## Set Up Amazon Inspector<a name="setupinspector_ubuntu"></a>
@@ -96,31 +90,18 @@ In this walkthrough, if you complete the preceding steps, your assessment run pr
 If you do not see the new finding, choose the **Refresh** icon\.
 
    To expand the view and see the details of this finding, choose the arrow to the left of the finding\. The details of the finding include the following:
-
    + The ARN of the finding
-
    + The name of the assessment run that produced this finding
-
    + The name of the assessment target that produced this finding
-
    + The name of the assessment template that produced this finding
-
    + The assessment run start time
-
    + The assessment run end time
-
    + The assessment run status
-
    + The name of the rules package that includes the rule that triggered this finding
-
    + The Amazon Inspector Agent ID
-
    + The name of the finding
-
    + The severity of the finding
-
    + The description of the finding
-
    + The recommended remediation steps that you can complete to fix the potential security issue described by the finding
 
 ## Apply the Recommended Fix to Your Assessment Target<a name="upgradeapplication_ubuntu"></a>

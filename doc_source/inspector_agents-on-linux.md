@@ -5,7 +5,7 @@ Sign in to your EC2 instance running a Linux\-based operating system, and run an
 **Note**  
 The following commands are functional in all regions that are supported by Amazon Inspector\.
 
-
+**Topics**
 + [To verify that the Amazon Inspector Agent is running](#verify-linux)
 + [To stop the Amazon Inspector Agent](#stop-linux)
 + [To start the Amazon Inspector Agent](#start-linux)
@@ -13,7 +13,6 @@ The following commands are functional in all regions that are supported by Amazo
 + [To uninstall the Amazon Inspector Agent](#uninstall-linux)
 
 ## To verify that the Amazon Inspector Agent is running<a name="verify-linux"></a>
-
 + To verify that the Amazon Inspector Agent is installed and running, sign in to your EC2 instance, and run the following command:
 
   sudo /opt/aws/awsagent/bin/awsagent status
@@ -21,11 +20,9 @@ The following commands are functional in all regions that are supported by Amazo
   This command returns the status of the currently running agent, or an error stating that the agent cannot be contacted\.
 
 ## To stop the Amazon Inspector Agent<a name="stop-linux"></a>
-
 + To stop the agent, run sudo /etc/init\.d/awsagent stop
 
 ## To start the Amazon Inspector Agent<a name="start-linux"></a>
-
 + To start the agent, run sudo /etc/init\.d/awsagent start
 
 ## To configure proxy support for Amazon Inspector Agents<a name="inspector-agent-proxy-linux"></a>
@@ -39,14 +36,11 @@ Complete one of the following procedures:
 1. Create a file called `awsagent.env` and save it in the `/etc/init.d/` directory\.
 
 1. Edit awsagent\.env to include these environment variables in the following format:
-
-   + export https\_proxy=https://hostname:port
-
-   + export http\_proxy=http://hostname:port
-
+   + export https\_proxy=hostname:port
+   + export http\_proxy=hostname:port
    + export no\_proxy=169\.254\.169\.254
 **Note**  
-Substitute example values above with valid URLs for `https_proxy` and `http_proxy` only\. You must specify the IP address of the instance metadata endpoint \(169\.254\.169\.254\) for the `no_proxy` variable\. 
+Substitute example values above with valid hostname and port number combinations only\. You must specify the IP address of the instance metadata endpoint \(169\.254\.169\.254\) for the `no_proxy` variable\. 
 
 1. Install the Amazon Inspector Agent by completing the steps in the [To install the Amazon Inspector Agent on a Linux\-based EC2 instance](inspector_installing-uninstalling-agents.md#install-linux) procedure\.
 
@@ -57,14 +51,11 @@ Substitute example values above with valid URLs for `https_proxy` and `http_prox
 1. Create a file called `awsagent.env` and save it in the `/etc/init.d/` directory\.
 
 1. Edit awsagent\.env to include these environment variables in the following format:
-
-   + export https\_proxy=https://hostname:port
-
-   + export http\_proxy=http://hostname:port
-
+   + export https\_proxy=hostname:port
+   + export http\_proxy=hostname:port
    + export no\_proxy=169\.254\.169\.254
 **Note**  
-Substitute example values above with valid URLs for `https_proxy` and `http_proxy` only\. You must specify the IP address of the instance metadata endpoint \(169\.254\.169\.254\) for the `no_proxy` variable\. 
+Substitute example values above with valid hostname and port number combinations only\. You must specify the IP address of the instance metadata endpoint \(169\.254\.169\.254\) for the `no_proxy` variable\. 
 
 1. Restart the Amazon Inspector Agent by first stopping it using `sudo /etc/init.d/awsagent restart`\.
 
@@ -77,7 +68,5 @@ Substitute example values above with valid URLs for `https_proxy` and `http_prox
 For more information about operating systems supported for Amazon Inspector see [Amazon Inspector Supported Operating Systems and Regions](inspector_supported_os_regions.md)\.
 
 1. To uninstall the agent, use one of the following commands:
-
    + On Amazon Linux, CentOS, and Red Hat, run sudo yum remove 'AwsAgent\*'
-
    + On Ubuntu Server, run sudo apt\-get purge 'awsagent\*'
