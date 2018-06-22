@@ -42,7 +42,11 @@ You can create up to 50 assessment targets per AWS account\. For more informatio
 
 1. For **Name**, type a name for your assessment target\.
 
-1. Use the **Tags**' **Key** and **Value** fields to type the tag key name and key\-value pairs in order to select the EC2 instances that you want to include in this assessment target\.
+1. Do one of the following:
+   + Check the **All instances** checkbox to include all EC2 instances in this AWS account and region in this assessment target\.
+**Note**  
+The limit on the maximum number of agents that can be included in an assessment run applies when you use this option\. For more information, see [Amazon Inspector Service Limits](inspector_limits.md)\.
+   + Use the **Tags**' **Key** and **Value** fields to type the tag key name and key\-value pairs in order to select the EC2 instances that you want to include in this assessment target\.
 
 1. \(Optional\) While creating a new target, you can check the checkbox to install the Amazon Inspector Agent on all EC2 instances in this target\. To use this option, your EC2 instances must have the SSM Agent installed and an IAM role that allows Run Command\. The SSM Agent is installed, by default, on Amazon EC2 Windows instances and Amazon Linux instances\. Amazon EC2 Systems Manager requires an IAM role for EC2 instances that will process commands and a separate role for users executing commands\. For more information, see [Installing and Configuring SSM Agent](http://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html) and [Configuring Security Roles for System Manager](http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html)\. 
 **Important**  

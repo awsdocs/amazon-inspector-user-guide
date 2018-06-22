@@ -13,6 +13,7 @@
 + [Asia Pacific \(Tokyo\)](#ap-northeast-1)
 + [EU \(Ireland\)](#eu-west-1)
 + [EU \(Frankfurt\)](#eu-central-1)
++ [AWS GovCloud \(US\)](#govcloud)
 
 ## US West \(Oregon\)<a name="us-west-2"></a>
 
@@ -113,3 +114,13 @@
 | CIS Operating System Security Configuration Benchmarks | arn:aws:inspector:eu\-central\-1:537503971621:rulespackage/0\-nZrAVuv8 | 
 | Security Best Practices | arn:aws:inspector:eu\-central\-1:537503971621:rulespackage/0\-ZujVHEPB | 
 | Runtime Behavior Analysis | arn:aws:inspector:eu\-central\-1:537503971621:rulespackage/0\-0GMUM6fg | 
+
+## AWS GovCloud \(US\)<a name="govcloud"></a>
+
+
+| Rules package name | ARN | 
+| --- | --- | 
+| Common Vulnerabilities and Exposures | arn:aws\-us\-gov:inspector:us\-gov\-west\-1:850862329162:rulespackage/0\-4oQgcI4G | 
+| CIS Operating System Security Configuration Benchmarks | arn:aws\-us\-gov:inspector:us\-gov\-west\-1:850862329162:rulespackage/0\-Ac4CFOuc | 
+| Security Best Practices | arn:aws\-us\-gov:inspector:us\-gov\-west\-1:850862329162:rulespackage/0\-rOTGqe5G | 
+| Runtime Behavior Analysis | arn:aws\-us\-gov:inspector:us\-gov\-west\-1:850862329162:rulespackage/0\-JMyjuzoW | 

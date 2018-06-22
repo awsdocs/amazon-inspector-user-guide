@@ -24,6 +24,9 @@ The ** Amazon Linux AMI with Amazon Inspector Agent** is available in the EC2 co
 You can install the Amazon Inspector Agent on your EC2 instances using the [Systems Manager Run Command](http://docs.aws.amazon.com/systems-manager/latest/userguide/execute-remote-commands.html)\. This enables you to install the agent remotely and on multiple instances \(both Linux\-based and Windows\-based instances with the same command\) at once\. 
 
 **Important**  
+Agent installation using the Systems Manager Run Command is not currently supported for the Debian operating system\.
+
+**Important**  
 To utilize this option, make sure that your EC2 instance has the SSM Agent installed and has an IAM role that allows Run Command\. The SSM Agent is installed, by default, on Amazon EC2 Windows instances and Amazon Linux instances\. Amazon EC2 Systems Manager requires an IAM role for EC2 instances that will process commands and a separate role for users executing commands\. For more information, see [Installing and Configuring SSM Agent](http://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html) and [Configuring Security Roles for System Manager](http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html)\. 
 
 1. Open the Amazon EC2 console at [https://console\.aws\.amazon\.com/ec2/](https://console.aws.amazon.com/ec2/)\. 
@@ -64,11 +67,13 @@ sudo bash install \-u false
 \(Optional\) To remove the agent installation script, run rm install \.
 
 1. Verify that the following files required for the agent to be successfully installed and functioning properly are installed:
+   + libcurl4 \(required to install the agent on Ubuntu 18\.04\)
    + libcurl3
    + libgcc1
    + libc6
    + libstdc\+\+6
    + libssl1\.0\.1
+   + libssl1\.0\.2 \(required to install the agent on Debian 9\)
    + libpcap0\.8
 
 ## To install the Amazon Inspector Agent on a Windows\-based EC2 instance<a name="install-windows"></a>

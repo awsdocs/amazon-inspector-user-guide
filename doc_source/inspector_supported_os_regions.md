@@ -16,11 +16,12 @@ For information on how Amazon Inspector rules packages are available across supp
 ## Supported Linux\-based Operating Systems<a name="inspector_supported-linux-os"></a>
 
 In this release of Amazon Inspector, your assessment targets can consist only of EC2 instances that run the 64\-bit version of the following Linux\-based operating systems:
-+ Amazon Linux \(2015\.03, 2015\.09, 2016\.03, 2016\.09, 2017\.03, 2017\.09\)
 + Amazon Linux 2 \(2017\.12\)
-+ Ubuntu \(14\.04 LTS, 16\.04 LTS\)
-+ Red Hat Enterprise Linux \(6\.2 \- 6\.9, 7\.2 \- 7\.4\)
-+ CentOS \(6\.2 \- 6\.9, 7\.2 \- 7\.4\)
++ Amazon Linux \(2018\.03, 2017\.09, 2017\.03, 2016\.09, 2016\.03, 2015\.09, 2015\.03, 2014\.09, 2014\.03, 2013\.09, 2013\.03, 2012\.09, 2012\.03\)
++ Ubuntu \(18\.04 LTS, 16\.04 LTS, 14\.04 LTS\)
++ Debian \(9\.0 \- 9\.4\)
++ Red Hat Enterprise Linux \(7\.2 \- 7\.5, 6\.2 \- 6\.9\)
++ CentOS \(7\.2 \- 7\.5, 6\.2 \- 6\.9\)
 
 **Important**  
 The following list contains all kernel versions that are compatible with the Amazon Inspector Agent running on Linux, Ubuntu, Red Hat Enterprise Linux, and CentOS: [https://s3\.amazonaws\.com/aws\-agent\.us\-east\-1/linux/support/supported\_versions\.json](https://s3.amazonaws.com/aws-agent.us-east-1/linux/support/supported_versions.json)\.  
@@ -46,3 +47,4 @@ In this release of Amazon Inspector, your assessment targets can consist only of
 + US East \(Ohio\)
 + US West \(Northern California\)
 + US West \(Oregon\)
++ AWS GovCloud \(US\)

@@ -170,13 +170,13 @@ Amazon Simple Notification Service \(Amazon SNS\) is a web service that sends me
 
 1. Publish to the SNS topic\. For more information, see [Publish to a Topic](http://docs.aws.amazon.com/sns/latest/dg/PublishTopic.html)\.
 
-1. Enable Amazon Inspector to subscribe and publish messages to the topic:
+1. Enable Amazon Inspector to publish messages to the topic:
 
    1. Open the Amazon SNS console at [https://console\.aws\.amazon\.com/sns/](https://console.aws.amazon.com/sns/)\.
 
    1.  Select your SNS topic, and for **Actions**, choose **Edit topic policy**\.
 
-   1. For **Allow these users to publish messages to this topic** and **Allow these users to subscribe to this topic**, choose **Only these AWS users**, and then type one of the following ARNs, depending on your region:
+   1. For **Allow these users to publish messages to this topic**, choose **Only these AWS users**, and then type one of the following ARNs, depending on your region:
       + for Asia Pacific \(Mumbai\) \- *arn:aws:iam::162588757376:root*
       + for Asia Pacific \(Seoul\) \- *arn:aws:iam::526946625049:root*
       + for Asia Pacific \(Sydney\) \- *arn:aws:iam::454640832652:root*
@@ -187,3 +187,4 @@ Amazon Simple Notification Service \(Amazon SNS\) is a web service that sends me
       + for US East \(Ohio\) \- *arn:aws:iam::646659390643:root*
       + for US West \(Northern California\) \- *arn:aws:iam::166987590008:root*
       + for US West \(Oregon\) \- *arn:aws:iam::758058086616:root*
+      + for AWS GovCloud \(US\) \- *arn:aws\-us\-gov:iam:: 850862329162:root*

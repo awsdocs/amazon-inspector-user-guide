@@ -46,3 +46,4 @@ Amazon's trademarks and trade dress may not be used in
    + [Using Identity-based Policies (IAM Policies) for Amazon Inspector](access-control-identity-based.md)
    + [Amazon Inspector API Permissions: Actions, Resources, and Conditions Reference](inspector-api-permissions-ref.md)
 + [Appendix - Amazon Inspector Rules Packages' ARNs](inspector_rules-arns.md)
++ [Document History](document-history.md)
