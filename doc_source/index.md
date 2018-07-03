@@ -32,6 +32,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Amazon Inspector Assessment Templates and Assessment Runs](inspector_assessments.md)
 + [Amazon Inspector Findings](inspector_findings.md)
 + [Assessment Reports](inspector_reports.md)
++ [Exclusions in Amazon Inspector](inspector_exclusions.md)
 + [Amazon Inspector Rules Packages and Rules](inspector_rule-packages.md)
    + [Common Vulnerabilities and Exposures](inspector_cves.md)
    + [Center for Internet Security (CIS) Benchmarks](inspector_cis.md)

@@ -59,7 +59,7 @@ You can also install the Amazon Inspector Agent on multiple EC2 instances \(both
 1. Choose **Save**\.
 
 **Note**  
-For your existing assessment targets, you can use the **Preview Target** button on the **Assessment Targets** page to review all EC2 instances that are currently included in the assessment targets\. For every EC2 instance listed, you can review the hostname, instance ID, IP address, and the status of the Amazon Inspector Agent that is running on the EC2 instance\. The agent status can have the following values: **HEALTHY**, **UNHEALTHY** \(displayed when the agent is reporting that it is not in a healthy state\), and **UNKNOWN** \(displayed when Amazon Inspector is unable to determine whether there is an Amazon Inspector Agent running on the EC2 instance\)\. 
+You can use the **Preview Target** button on the **Assessment Targets** page to review all EC2 instances included in the assessment target\. For every EC2 instance included, you can review the hostname, instance ID, IP address, and the status of the Amazon Inspector agent that is running on the EC2 instance\. The agent status can have the following values: **HEALTHY**, **UNHEALTHY**, and **UNKNOWN** \(displayed when Amazon Inspector is unable to determine whether there is an Amazon Inspector agent running on the EC2 instance\)\.
 
 ## Deleting an Assessment Target \(Console\)<a name="delete_assessment_target_via_console"></a>
 
