@@ -16,10 +16,10 @@ For information on how Amazon Inspector rules packages are available across supp
 ## Supported Linux\-based Operating Systems<a name="inspector_supported-linux-os"></a>
 
 In this release of Amazon Inspector, your assessment targets can consist only of EC2 instances that run the 64\-bit version of the following Linux\-based operating systems:
-+ Amazon Linux 2 \(2017\.12\)
++ Amazon Linux 2 \(LTS, 2017\.12\)
 + Amazon Linux \(2018\.03, 2017\.09, 2017\.03, 2016\.09, 2016\.03, 2015\.09, 2015\.03, 2014\.09, 2014\.03, 2013\.09, 2013\.03, 2012\.09, 2012\.03\)
 + Ubuntu \(18\.04 LTS, 16\.04 LTS, 14\.04 LTS\)
-+ Debian \(9\.0 \- 9\.4\)
++ Debian \(9\.0 \- 9\.5, 8\.0 \- 8\.7\)
 + Red Hat Enterprise Linux \(7\.2 \- 7\.5, 6\.2 \- 6\.9\)
 + CentOS \(7\.2 \- 7\.5, 6\.2 \- 6\.9\)
 

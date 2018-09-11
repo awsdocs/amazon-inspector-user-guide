@@ -6,7 +6,8 @@ The following table describes the documentation release history of Amazon Inspec
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| Added region support | Added region support for AWS GovCloud \(US\) | June 13, 2018 | 
+| [Added OS support](#document-history) | Added support for various operating systems to the CIS Benchmark rules package\. For more information, see [Center for Internet Security \(CIS\) Benchmarks]() and [Rules Packages Availability Across Supported Operating Systems]()\. | August 13, 2018 | 
+| [Added region support](#document-history) | Added region support for AWS GovCloud \(US\) | June 13, 2018 | 
 
 The following table describes the documentation release history of Amazon Inspector before June 2018\.
 
@@ -20,14 +21,14 @@ The following table describes the documentation release history of Amazon Inspec
 | Added OS support |  Added Amazon Inspector support for Amazon Linux 2\.  | March 13, 2018 | 
 | Added OS support |  Added Amazon Inspector assessment support for Windows 2016\.  | February 20, 2018 | 
 | Added region support |  Added Amazon Inspector support for the Ohio \(CMH\) region\.  | February 7, 2018 | 
-| New content |  Amazon Inspector assessments can now run when the kernal module is unavailable\.  | January 11, 2018 | 
+| New content |  Amazon Inspector assessments can now run when the kernel module is unavailable\.  | January 11, 2018 | 
 | Added region support |  Added Amazon Inspector support for the Frankfurt \(FRA\) region\.  | December 19, 2017 | 
 | New content |  Added ability to check Amazon Inspector agent health with the Amazon Inspector API and console\.  | December 15, 2017 | 
 | New content |  Added the following features: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/inspector/latest/userguide/document-history.html)  | December 5, 2017 | 
 | Added OS support |  Added Amazon Inspector assessment support for CentOS 7\.4\.  | November 9, 2017 | 
 | Added OS support |  Added Amazon Inspector assessment support for Amazon Linux 2017\.09\.  | October 11, 2017 | 
 | Added OS support |  Added Amazon Inspector assessment support for RHEL 7\.4\.  | February 20, 2018 | 
-| Added HIPAA eligability |  Amazon Inspector is now HIPAA eligable\.  | July 31, 2017 | 
+| Added HIPAA eligibility |  Amazon Inspector is now HIPAA eligible\.  | July 31, 2017 | 
 | New content |  Added ability to automatically trigger Amazon Inspector security assessment with Amazon CloudWatch Events  | July 27, 2017 | 
 | Added region support |  Added Amazon Inspector support for the San Francisco \(SFO\) region\.  | June 6, 2018 | 
 | Added OS support |  Added Amazon Inspector assessment support for RHEL 6\.2\-6\.9, RHEL 7\.2\-7\.3, CentOS 6\.9, and CentOS 7\.2\-7\.3\.  | May 23, 2017 | 

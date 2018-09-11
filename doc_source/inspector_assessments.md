@@ -131,7 +131,7 @@ To set up automatic assessment runs using the AWS Lambda console, perform the fo
 1. On the **Configure function** page, specify the following: 
    + For **Name**, type a name for your function\.
    + \(Optional\) For **Description**, type a description that will help you identify your function later\.
-   + For **runtime**, keep the default value of **Node\.js 4\.3**\. AWS Lambda supports the **inspector\-scheduled\-run** blueprint only for the **Node\.js 4\.3** runtime\.
+   + For **runtime**, keep the default value of **Node\.js 8\.10**\. AWS Lambda supports the **inspector\-scheduled\-run** blueprint only for the **Node\.js 8\.10** runtime\.
    + The assessment template that you want to run automatically using this function\. You do this by providing the value for the environment variable called **assessmentTemplateArn**\.
    + Keep the handler set to the default value of **index\.handler**\.
    + The permissions for your function using the **Role** field\. For more information, see [AWS Lambda Permissions Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role)\.

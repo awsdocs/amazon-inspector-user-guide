@@ -2,6 +2,8 @@
 
 The Amazon Inspector Agent can be installed using the Systems Manager Run Command on multiple instances \(including both Linux\-based and Windows\-based instances\), or individually by signing in to each EC2 instance\. The procedures below provide instructions for both methods\.
 
+Additionally, you can quickly install the agent on all Amazon EC2 instances included in an assessment target by selecting the **Install Agents** box on the **Assessment target** creation page\.
+
 **Topics**
 + [Amazon Linux AMI with Amazon Inspector Agent](#ami-with-agent)
 + [To install the Amazon Inspector Agent on multiple EC2 instances using the Systems Manager Run Command](#install-run-command)
@@ -33,7 +35,7 @@ To utilize this option, make sure that your EC2 instance has the SSM Agent insta
 
 1. In the navigation pane under **Systems Manager Services**, choose **Run Command**\. 
 
-1. Choose **Run a command**\. 
+1. Choose **Run a command**\.
 
 1. For **Command document**, choose the document named 
 
@@ -53,8 +55,8 @@ You can also install the Amazon Inspector Agent on multiple EC2 instances \(both
 For more information about operating systems supported for Amazon Inspector see [Amazon Inspector Supported Operating Systems and Regions](inspector_supported_os_regions.md)\.
 
 1. Download the agent installation script by running one of the following commands:
-   + wget https://d1wk0tztpsntt1\.cloudfront\.net/linux/latest/install
-   + curl \-O https://d1wk0tztpsntt1\.cloudfront\.net/linux/latest/install
+   + wget https://inspector\-agent\.amazonaws\.com/linux/latest/install
+   + curl \-O https://inspector\-agent\.amazonaws\.com/linux/latest/install
 
 1. \(Optional\) Verify that the Amazon Inspector Agent installation script is not altered or corrupted\. For more information, see [\(Optional\) Verify the Signature of the Amazon Inspector Agent Installation Script on Linux\-based Operating Systems](inspector_verify-sig-agent-download-linux.md)\.
 
@@ -82,7 +84,7 @@ sudo bash install \-u false
 **Note**  
 For more information about operating systems supported for Amazon Inspector see [Amazon Inspector Supported Operating Systems and Regions](inspector_supported_os_regions.md)\.
 
-1. Download the following \.exe file: https://d1wk0tztpsntt1\.cloudfront\.net/windows/installer/latest/AWSAgentInstall\.exe
+1. Download the following \.exe file: https://inspector\-agent\.amazonaws\.com/windows/installer/latest/AWSAgentInstall\.exe 
 
 1. Open a command prompt window \(with Administrative permissions\), navigate to the location where you saved the downloaded AWSAgentInstall\.exe, and run AWSAgentInstall\.exe to install the Amazon Inspector Agent\.
 **Note**  
