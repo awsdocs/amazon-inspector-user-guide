@@ -3,7 +3,7 @@
 Every AWS resource is owned by an AWS account, and permissions to create or access a resource are governed by permissions policies\. An account administrator can attach permissions policies to IAM identities \(that is, users, groups, and roles\), and some services \(such as AWS Lambda\) also support attaching permissions policies to resources\.
 
 **Note**  
-An *account administrator* \(or administrator user\) is a user with administrator privileges\. For more information, see [IAM Best Practices](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) in the *IAM User Guide*\.
+An *account administrator* \(or administrator user\) is a user with administrator privileges\. For more information, see [IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) in the *IAM User Guide*\.
 
 When granting permissions, you decide who is getting the permissions, the resources they get permissions for, and the specific actions that you want to allow on those resources\.
 
@@ -43,7 +43,7 @@ A *resource owner* is the AWS account that created the resource\. That is, the r
 A *permissions policy* describes who has access to what\. The following section explains the available options for creating permissions policies\.
 
 **Note**  
-This section discusses using IAM in the context of Amazon Inspector\. It doesn't provide detailed information about the IAM service\. For complete IAM documentation, see [What Is IAM?](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) in the *IAM User Guide*\. For information about IAM policy syntax and descriptions, see [AWS IAM Policy Reference](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
+This section discusses using IAM in the context of Amazon Inspector\. It doesn't provide detailed information about the IAM service\. For complete IAM documentation, see [What Is IAM?](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) in the *IAM User Guide*\. For information about IAM policy syntax and descriptions, see [AWS IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
 
 Policies attached to an IAM identity are referred to as *identity\-based* policies \(IAM policies\)\. Policies attached to a resource are referred to as *resource\-based* policies\. Amazon Inspector supports only identity\-based policies\.
 
@@ -60,7 +60,7 @@ You can attach policies to IAM identities\. For example, you can do the followin
   + Account A administrator attaches a trust policy to the role identifying Account B as the principal who can assume the role\. 
   + Account B administrator can then delegate permissions to assume the role to any users in Account B\. Doing this allows users in Account B to create or access resources in Account A\. If you want to grant an AWS service permissions to assume the role, he principal in the trust policy can also be an AWS service principal\.
 
-   For more information about using IAM to delegate permissions, see [Access Management](http://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) in the *IAM User Guide*\. 
+   For more information about using IAM to delegate permissions, see [Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) in the *IAM User Guide*\. 
 
 The following is an example policy that grants permissions for the `inspector:ListFindings` action on all resources\. 
 
@@ -79,7 +79,7 @@ The following is an example policy that grants permissions for the `inspector:Li
 }
 ```
 
-For more information about using identity\-based policies with Amazon Inspector, see [Using Identity\-based Policies \(IAM Policies\) for Amazon Inspector](access-control-identity-based.md)\. For more information about users, groups, roles, and permissions, see [Identities \(Users, Groups, and Roles\)](http://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\. 
+For more information about using identity\-based policies with Amazon Inspector, see [Using Identity\-based Policies \(IAM Policies\) for Amazon Inspector](access-control-identity-based.md)\. For more information about users, groups, roles, and permissions, see [Identities \(Users, Groups, and Roles\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\. 
 
 ### id="access\-control\-manage\-access\-resource\-based\.title">Resource\-Based Policies<a name="access-control-manage-access-resource-based"></a>
 
@@ -95,12 +95,12 @@ The following are the most basic policy elements:
 + **Effect** – You specify the effect when the user requests the specific action—this can be either allow or deny\. If you don't explicitly grant access to \(allow\) a resource, access is implicitly denied\. You can also explicitly deny access to a resource, which you might do to make sure that a user cannot access it, even if a different policy grants access\.
 + **Principal** – In identity\-based policies \(IAM policies\), the user that the policy is attached to is the implicit principal\.
 
-To learn more about IAM policy syntax and descriptions, see [AWS IAM Policy Reference](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
+To learn more about IAM policy syntax and descriptions, see [AWS IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
 
 For a table showing all of the Amazon Inspector API actions and the resources that they apply to, see [Amazon Inspector API Permissions: Actions, Resources, and Conditions Reference](inspector-api-permissions-ref.md)\. 
 
 ## Specifying Conditions in a Policy<a name="specifying-conditions"></a>
 
-When you grant permissions, you can use the IAM policy language to specify the conditions that need to be met for a policy to take effect\. For example, you might want a policy to be applied only after a specific date\. For more information about specifying conditions in a policy's language, see [Condition](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#Condition) in the *IAM User Guide*\.
+When you grant permissions, you can use the IAM policy language to specify the conditions that need to be met for a policy to take effect\. For example, you might want a policy to be applied only after a specific date\. For more information about specifying conditions in a policy's language, see [Condition](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#Condition) in the *IAM User Guide*\.
 
-To express conditions, you use predefined condition keys\. There are no condition keys specific to Amazon Inspector\. However, there are AWS\-wide condition keys that you can use as appropriate\. For a complete list of AWS\-wide keys, see [Available Keys for Conditions](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\.
+To express conditions, you use predefined condition keys\. There are no condition keys specific to Amazon Inspector\. However, there are AWS\-wide condition keys that you can use as appropriate\. For a complete list of AWS\-wide keys, see [Available Keys for Conditions](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\.

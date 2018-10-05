@@ -15,7 +15,7 @@ This tutorial is designed to demonstrate how to use Amazon Inspector to analyze 
 ## Step 1: Set Up an Amazon EC2 Instance to Use With Amazon Inspector<a name="setupinspector_ubuntu"></a>
 + For this tutorial, create one EC2 instance running Ubuntu Server 16\.04 LTS and tag it using the **Name** key and a value of **InspectorEC2InstanceUbuntu**\.
 **Note**  
-For more information about tagging EC2 instances, see [ Resources and Tags](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_Resources.html)\.
+For more information about tagging EC2 instances, see [ Resources and Tags](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_Resources.html)\.
 
 ## Step 2: Modify Your Amazon EC2 Instance<a name="prepareapplication_ubuntu"></a>
 

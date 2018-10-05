@@ -24,7 +24,7 @@ When you tag your EC2 instances to build assessment targets for Amazon Inspector
 
 You can add tags to EC2 instances when you create them or add, change, or remove those tags one at a time within each EC2 instance's console page\. You can also add tags to multiple EC2 instances at once using the Tag Editor\.
 
-For more information, see [ Tag Editor](http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html)\. For more information about tagging EC2 instances, see [Resources and Tags](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_Resources.html)\.
+For more information, see [ Tag Editor](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html)\. For more information about tagging EC2 instances, see [Resources and Tags](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_Resources.html)\.
 
 ## Amazon Inspector Assessment Targets Limits<a name="inspector-application-limits"></a>
 

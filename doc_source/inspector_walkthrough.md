@@ -17,7 +17,7 @@ This tutorial demonstrates how to use Amazon Inspector to analyze the behavior o
 For this tutorial, create one EC2 instance that runs Red Hat Enterprise Linux 7\.5, and tag it using the **Name** key and a value of **InspectorEC2InstanceLinux**\.
 
 **Note**  
-For more information about tagging EC2 instances, see [Resources and Tags](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_Resources.html)\.
+For more information about tagging EC2 instances, see [Resources and Tags](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_Resources.html)\.
 
 ## Step 2: Modify Your Amazon EC2 Instance<a name="prepareapplication"></a>
 

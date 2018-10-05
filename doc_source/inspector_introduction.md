@@ -38,7 +38,7 @@ The console is a browser\-based interface to access and use the Amazon Inspector
 AWS provides software development kits \(SDKs\) that consist of libraries and sample code for various programming languages and platforms \(Java, Python, Ruby, \.NET, iOS, Android, and more\)\. The SDKs provide a convenient way to create programmatic access to the Amazon Inspector service\. For information about the AWS SDKs, including how to download and install them, see [Tools for Amazon Web Services](https://aws.amazon.com/tools/)\.
 
 **Amazon Inspector HTTPS API**  
-You can access Amazon Inspector and AWS programmatically by using the Amazon Inspector HTTPS API, which lets you issue HTTPS requests directly to the service\. For more information, see the [Amazon Inspector API Reference](http://docs.aws.amazon.com/inspector/latest/APIReference/)\.
+You can access Amazon Inspector and AWS programmatically by using the Amazon Inspector HTTPS API, which lets you issue HTTPS requests directly to the service\. For more information, see the [Amazon Inspector API Reference](https://docs.aws.amazon.com/inspector/latest/APIReference/)\.
 
 **AWS Command Line Tools**  
 You can use the AWS command line tools to issue commands at your system's command line to perform Amazon Inspector tasks; this can be faster and more convenient than using the console\. The command line tools are also useful if you want to build scripts that perform AWS tasks\. For more information, see the [Amazon Inspector's AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/reference/inspector/index.html)\.

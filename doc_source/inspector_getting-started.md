@@ -5,9 +5,9 @@ Set up Amazon Inspector and get started by creating and running your first asses
 **Important**  
 To use Amazon Inspector you must have an Amazon Web Services \(AWS\) account\. When you sign up for AWS, your account is automatically signed up for all services in AWS, including Amazon Inspector\. If you don't have an AWS account, use the following procedure to create one\.  
 Open [https://aws\.amazon\.com/](https://aws.amazon.com/), and then choose **Create an AWS Account**\.  
-This might be unavailable in your browser if you previously signed into the AWS Management Console\. In that case, choose **Sign in to a different account**, and then choose **Create a new AWS account**\.
+If you previously signed in to the AWS Management Console using AWS account root user credentials, choose **Sign in to a different account**\. If you previously signed in to the console using IAM credentials, choose **Sign\-in using root account credentials**\. Then choose **Create a new AWS account**\.
 Follow the online instructions\.  
-Part of the sign\-up procedure involves receiving a phone call and entering a PIN using the phone keypad\.
+Part of the sign\-up procedure involves receiving a phone call and entering a verification code using the phone keypad\.
 
 **Topics**
 + [Pre\-Requisites for Using Amazon Inspector](#pre-requisites)
@@ -52,7 +52,7 @@ The following procedure shows you how to complete the advanced Amazon Inspector 
 
 1. On the **Define an assessment target** page, enter the name of your assessment target\. 
 
-1. For **All Instances**, you can keep the check box selected to include all EC2 instances in your AWS account and Region in the assessment target\. If you want to choose which EC2 instances to include, clear the **All Instances** check box, and enter the **Key** and **Value** tags associated with the target EC2 instances\. For more information about tagging your EC2 instances, see [ Tagging Your Amazon EC2 Resources](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html)\.
+1. For **All Instances**, you can keep the check box selected to include all EC2 instances in your AWS account and Region in the assessment target\. If you want to choose which EC2 instances to include, clear the **All Instances** check box, and enter the **Key** and **Value** tags associated with the target EC2 instances\. For more information about tagging your EC2 instances, see [ Tagging Your Amazon EC2 Resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html)\.
 
 1. For **Install Agents**, you can keep the check box selected by default if your instances allows [System Manager Run Command](https://docs.aws.amazon.com/systems-manager/latest/userguide/execute-remote-commands.html                         )\. The service installs an Amazon Inspector agent on all EC2 instances in the assessment target that allow System Manager Run Command\. To use this option, make sure that all of your EC2 instances in the current AWS account and AWS region have the SSM Agent installed and has an IAM role that allows Run Command\. For more information, see [To install the Amazon Inspector Agent on multiple EC2 instances using the Systems Manager Run Command](inspector_installing-uninstalling-agents.md#install-run-command)\. If you want to manually install the agent, see [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)\.
 

@@ -44,7 +44,7 @@ Amazon Inspector allows you to preview potential exclusions before running an as
 
 1. Review the descriptions of all detected exclusions and the recommendations for addressing them\.
 
-   You can also list and describe exclusions by using the [http://docs.aws.amazon.com/inspector/latest/APIReference/API_ListExclusions.html](http://docs.aws.amazon.com/inspector/latest/APIReference/API_ListExclusions.html) and [http://docs.aws.amazon.com/inspector/latest/APIReference/API_DescribeExclusions.html](http://docs.aws.amazon.com/inspector/latest/APIReference/API_DescribeExclusions.html)operations respectively\.
+   You can also list and describe exclusions by using the [https://docs.aws.amazon.com/inspector/latest/APIReference/API_ListExclusions.html](https://docs.aws.amazon.com/inspector/latest/APIReference/API_ListExclusions.html) and [https://docs.aws.amazon.com/inspector/latest/APIReference/API_DescribeExclusions.html](https://docs.aws.amazon.com/inspector/latest/APIReference/API_DescribeExclusions.html)operations respectively\.
 
 ## Viewing Post\-Assessment Exclusions<a name="exclusions-post-assessment"></a>
 
@@ -60,4 +60,4 @@ After an assessment run, you can view exclusions details\.
 
 1. Review the descriptions of all detected exclusions and the recommendations for addressing them\.
 
-   You can also list and describe exclusions by using the [http://docs.aws.amazon.com/inspector/latest/APIReference/API_ListExclusions.html](http://docs.aws.amazon.com/inspector/latest/APIReference/API_ListExclusions.html) and [http://docs.aws.amazon.com/inspector/latest/APIReference/API_DescribeExclusions.html](http://docs.aws.amazon.com/inspector/latest/APIReference/API_DescribeExclusions.html)operations respectively\. 
+   You can also list and describe exclusions by using the [https://docs.aws.amazon.com/inspector/latest/APIReference/API_ListExclusions.html](https://docs.aws.amazon.com/inspector/latest/APIReference/API_ListExclusions.html) and [https://docs.aws.amazon.com/inspector/latest/APIReference/API_DescribeExclusions.html](https://docs.aws.amazon.com/inspector/latest/APIReference/API_DescribeExclusions.html)operations respectively\. 
