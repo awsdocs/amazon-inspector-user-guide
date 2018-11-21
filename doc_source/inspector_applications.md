@@ -54,12 +54,12 @@ If an EC2 instance already has an agent running on it, using this option replace
 **Note**  
 For your existing assessment targets, you can select the **Install Agents with Run Command button** to install the Amazon Inspector Agent on all EC2 instances in this target\.
 **Note**  
-You can also install the Amazon Inspector Agent on multiple EC2 instances \(both Linux\-based and Windows\-based instances with the same command\) remotely by using the Systems Manager Run Command\. For more information, see [To install the Amazon Inspector Agent on multiple EC2 instances using the Systems Manager Run Command](inspector_installing-uninstalling-agents.md#install-run-command)\. 
+You can also install the Amazon Inspector Agent on multiple EC2 instances \(both Linux\-based and Windows\-based instances with the same command\) remotely by using the Systems Manager Run Command\. For more information, see [Installing the Amazon Inspector Aganet on Multiple EC2 Instances Using the Systems Manager Run Command](inspector_installing-uninstalling-agents.md#install-run-command)\. 
 
 1. Choose **Save**\.
 
 **Note**  
-You can use the **Preview Target** button on the **Assessment Targets** page to review all EC2 instances included in the assessment target\. For every EC2 instance included, you can review the hostname, instance ID, IP address, and the status of the Amazon Inspector agent that is running on the EC2 instance\. The agent status can have the following values: **HEALTHY**, **UNHEALTHY**, and **UNKNOWN** \(displayed when Amazon Inspector is unable to determine whether there is an Amazon Inspector agent running on the EC2 instance\)\.
+You can use the **Preview Target** button on the **Assessment Targets** page to review all EC2 instances included in the assessment target\. For every EC2 instance included, you can review the hostname, instance ID, IP address, and, if applicable, the status of the Amazon Inspector agent that is running on the EC2 instance\. The agent status can have the following values: **HEALTHY**, **UNHEALTHY**, and **UNKNOWN** \(displayed when Amazon Inspector is unable to determine whether there is an Amazon Inspector agent running on the EC2 instance\)\.
 
 ## Deleting an Assessment Target \(Console\)<a name="delete_assessment_target_via_console"></a>
 

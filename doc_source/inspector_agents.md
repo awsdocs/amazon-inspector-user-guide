@@ -1,22 +1,11 @@
 # Amazon Inspector Agents<a name="inspector_agents"></a>
 
-To assess the security of the EC2 instances that make up your Amazon Inspector assessment targets, you must install the Amazon Inspector Agent on each instance\. The agent monitors the behavior \(including network, file system, and process activity\) of the EC2 instance on which it is installed, collects behavior and configuration data \(telemetry\), and then passes the data to the Amazon Inspector service\.
+To fully assess the security of the EC2 instances that make up your Amazon Inspector assessment targets, you can install the Amazon Inspector Agent on each instance\. The agent monitors the behavior \(including network, file system, and process activity\) of the EC2 instance on which it is installed, collects behavior and configuration data \(telemetry\), and then passes the data to the Amazon Inspector service\.
 
 For more information about how to install, uninstall, and reinstall the Amazon Inspector Agent, how to verify whether the installed agent is running, and how to configure proxy support for the Amazon Inspector Agents, see [Working with Amazon Inspector Agents on Linux\-based Operating Systems](inspector_agents-on-linux.md) and [Working with Amazon Inspector Agents on Windows\-based Operating Systems](inspector_agents-on-win.md)\.
 
-**Topics**
-+ [Amazon Inspector Agent Privileges](#agent-privileges)
-+ [Network and Amazon Inspector Agent Security](#agent-security)
-+ [Amazon Inspector Agent Updates](#agent-updates)
-+ [Telemetry Data Lifecycle](#telemetry-data-lifecycle)
-+ [Access Control from Amazon Inspector into AWS Accounts](#access-control)
-+ [Amazon Inspector Agent Limits](#agent-limits)
-+ [Amazon Inspector Agent Public Licensing](#agent-license)
-+ [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)
-+ [Working with Amazon Inspector Agents on Linux\-based Operating Systems](inspector_agents-on-linux.md)
-+ [Working with Amazon Inspector Agents on Windows\-based Operating Systems](inspector_agents-on-win.md)
-+ [\(Optional\) Verify the Signature of the Amazon Inspector Agent Installation Script on Linux\-based Operating Systems](inspector_verify-sig-agent-download-linux.md)
-+ [\(Optional\) Verify the Signature of the Amazon Inspector Agent Installation Script on Windows\-based Operating Systems](inspector_verify-sig-agent-download-win.md)
+**Note**  
+An Amazon Inspector Agent is not required in order to run the [Network Reachability](inspector_network-reachability.md) rules package\.
 
 ## Amazon Inspector Agent Privileges<a name="agent-privileges"></a>
 

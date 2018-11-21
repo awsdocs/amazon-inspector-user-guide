@@ -1,11 +1,12 @@
 # Document History<a name="document-history"></a>
 
-**Latest documentation update**: June 13, 2018
+**Latest documentation update**: November 12, 2018
 
 The following table describes the documentation release history of Amazon Inspector after May 2018\.
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New content](#document-history) | Added the Amazon Inspector Network Reachability rules package, which allows users to run agentless assessments that analyze network configuration for security vulnerabiltiies\. For more information, see [Network Reachability](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_network-reachability.html)\. | November 9, 2018 | 
 | [Added OS support](#document-history) | Added support for various operating systems to the CIS Benchmark rules package\. For more information, see [Center for Internet Security \(CIS\) Benchmarks]() and [Rules Packages Availability Across Supported Operating Systems]()\. | August 13, 2018 | 
 | [Added region support](#document-history) | Added region support for AWS GovCloud \(US\) | June 13, 2018 | 
 

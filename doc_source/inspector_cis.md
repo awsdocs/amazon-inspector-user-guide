@@ -30,14 +30,14 @@ Amazon Inspector currently provides the following CIS Certified rules packages t
 + CIS Benchmark for Red Hat Enterprise Linux 7 Benchmark v2\.0\.2 Level 2 Workstation
 
 **Ubuntu**
-+ CIS Benchmark for Ubuntu Linuk 16\.04 LTS Benchmark v1\.1\.0 Level 1 Server
-+ CIS Benchmark for Ubuntu Linuk 16\.04 LTS Benchmark v1\.1\.0 Level 2 Server
-+ CIS Benchmark for Ubuntu Linuk 16\.04 LTS Benchmark v1\.1\.0 Level 1 Workstation
-+ CIS Benchmark for Ubuntu Linuk 16\.04 LTS Benchmark v1\.1\.0 Level 2 Workstation
-+ CIS Benchmark for Ubuntu Linuk 14\.04 LTS Benchmark v2\.0\.0 Level 1 Server
-+ CIS Benchmark for Ubuntu Linuk 14\.04 LTS Benchmark v2\.0\.0 Level 2 Server
-+ CIS Benchmark for Ubuntu Linuk 14\.04 LTS Benchmark v2\.0\.0 Level 1 Workstation
-+ CIS Benchmark for Ubuntu Linuk 14\.04 LTS Benchmark v2\.0\.0 Level 2 Workstation
++ CIS Benchmark for Ubuntu Linux 16\.04 LTS Benchmark v1\.1\.0 Level 1 Server
++ CIS Benchmark for Ubuntu Linux 16\.04 LTS Benchmark v1\.1\.0 Level 2 Server
++ CIS Benchmark for Ubuntu Linux 16\.04 LTS Benchmark v1\.1\.0 Level 1 Workstation
++ CIS Benchmark for Ubuntu Linux 16\.04 LTS Benchmark v1\.1\.0 Level 2 Workstation
++ CIS Benchmark for Ubuntu Linux 14\.04 LTS Benchmark v2\.0\.0 Level 1 Server
++ CIS Benchmark for Ubuntu Linux 14\.04 LTS Benchmark v2\.0\.0 Level 2 Server
++ CIS Benchmark for Ubuntu Linux 14\.04 LTS Benchmark v2\.0\.0 Level 1 Workstation
++ CIS Benchmark for Ubuntu Linux 14\.04 LTS Benchmark v2\.0\.0 Level 2 Workstation
 
 **Windows**
 + Windows Server 2008 R2 \(CIS Benchmark for Microsoft Windows 2008 R2, v3\.0\.0, Level 1 Domain Controller Profile\)

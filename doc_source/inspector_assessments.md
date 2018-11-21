@@ -51,7 +51,7 @@ For more information, see [Amazon Inspector Service Limits](inspector_limits.md)
 
 1. For **Target name**, choose an assessment target to analyze\.
 **Note**  
-While in the process of creating a new assessment template, you can use the **Preview Target** button on the **Assessment Templates** page to review all EC2 instances that are currently included in the assessment target that you want to include in this template\. For every EC2 instance listed, you can review the hostname, instance ID, IP address, and the status of the Amazon Inspector Agent that is running on the EC2 instance\. The agent status can have the following values: **HEALTHY**, **UNHEALTHY** \(displayed when the agent is reporting that it is not in a healthy state\), and **UNKNOWN** \(displayed when Amazon Inspector is unable to determine whether there is an Amazon Inspector Agent running on the EC2 instance\)\.   
+While in the process of creating a new assessment template, you can use the **Preview Target** button on the **Assessment Templates** page to review all EC2 instances that are currently included in the assessment target that you want to include in this template\. For every EC2 instance listed, you can review the hostname, instance ID, IP address, and, if applicable, the status of the Amazon Inspector Agent that is running on the EC2 instance\. The agent status can have the following values: **HEALTHY**, **UNHEALTHY** \(displayed when the agent is reporting that it is not in a healthy state\), and **UNKNOWN** \(displayed when Amazon Inspector is unable to determine whether there is an Amazon Inspector Agent running on the EC2 instance\)\.   
 You can also use the **Preview Target** button on the **Assessment Templates** page to review EC2 instances that make up assessment targets included in your previously created templates\.
 
 1. For **Rules packages**, choose one or more rules packages to include in your assessment template\.
@@ -187,4 +187,5 @@ Amazon Simple Notification Service \(Amazon SNS\) is a web service that sends me
       + for US East \(Ohio\) \- *arn:aws:iam::646659390643:root*
       + for US West \(Northern California\) \- *arn:aws:iam::166987590008:root*
       + for US West \(Oregon\) \- *arn:aws:iam::758058086616:root*
-      + for AWS GovCloud \(US\) \- *arn:aws\-us\-gov:iam:: 850862329162:root*
+      + for AWS GovCloud \(US\-East\) \- *arn:aws\-us\-gov:iam::206278770380:root*
+      + for AWS GovCloud \(US\-West\) \- *arn:aws\-us\-gov:iam::850862329162:root*

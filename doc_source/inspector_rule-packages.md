@@ -16,7 +16,12 @@ Each Amazon Inspector rule has an assigned severity level\. This reduces the nee
 
 ## Rules Packages in Amazon Inspector<a name="InspectorRulePackages"></a>
 
-The following are the rules packages available in Amazon Inspector:
+An Inspector assessment can use any combination of the following rules packages:
+
+**Network assessments:**
++ [Network Reachability](inspector_network-reachability.md)
+
+**Host assessments:**
 + [Common Vulnerabilities and Exposures](inspector_cves.md)
 + [Center for Internet Security \(CIS\) Benchmarks](inspector_cis.md)
 + [Security Best Practices](inspector_security-best-practices.md)

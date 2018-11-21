@@ -18,21 +18,21 @@ Part of the sign\-up procedure involves receiving a phone call and entering a ve
 
 When you launch the Amazon Inspector console for the first time, choose **Get Started** and complete the following prerequisite tasks\. You must complete these tasks before you can perform an Amazon Inspector assessment run:
 + You must have at least one Amazon EC2 instance running in your AWS environment in order to run an Amazon Inspector assessment\. For more information about launching EC2 instances, see [ Amazon Elastic Compute Cloud Documentation](https://aws.amazon.com/documentation/ec2/)\.
-+ The Amazon Inspector Agent must be running on each EC2 instance in your assessment target\. For more information about installing Amazon Inspector agents, see [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)\. Alternatively, you can choose an option while setting up an assessment to install the agent on your Amazon EC2 instances if those instances allow the [Systems Manager Run Command](https://docs.aws.amazon.com/systems-manager/latest/userguide/execute-remote-commands.html)\. For more information about Amazon Inspector Agents, see [Amazon Inspector Agents](inspector_agents.md)\. 
++ In most cases, the Amazon Inspector Agent must be running on each EC2 instance in your assessment target\. For more information about installing Amazon Inspector agents, see [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)\. Alternatively, you can choose an option while setting up an assessment to install the agent on your Amazon EC2 instances if those instances allow the [Systems Manager Run Command](https://docs.aws.amazon.com/systems-manager/latest/userguide/execute-remote-commands.html)\. For more information about Amazon Inspector Agents, see [Amazon Inspector Agents](inspector_agents.md)\. 
 
 ## One\-Click Setup<a name="inspector_basic-assessment"></a>
 
 The following procedure shows you how to create and run an automatic assessment using a pre\-built template and pre\-defined scheduling parameters \(once a week or one\-time\) on all available EC2 instances in the current AWS account and region\. 
 
-1. On the **Welcome** page, choose either **Run weekly \(recommended\)** or **Run once**\. 
+1. On the **Welcome** page, choose the type of assessment you would like to perform\. **Network Assessments** analyze the network configurations of your AWS environment for vulnerabilities, and do not require the presence of an Amazon Inspector Agent\. **Host Assessments** analyze the on\-host software and configurations of your EC2 instances for vulnerabilities, and requires the Inspector agent to be installed on the EC2 instances\.
 
-   As soon as you make your choice, the service automatically creates the assessment for you\. Specifically, the service does the following: 
+   Choose either **Run weekly \(recommended\)** or **Run once**\. As soon as you make your choice, the service automatically creates the assessment for you\. Specifically, the service does the following: 
 
    1. Creates a [service\-linked role](inspector_slr.md)\.
 **Note**  
 Amazon Inspector needs to enumerate your EC2 instances and tags to identify the EC2 instances specified in the assessment targets\. Amazon Inspector gets access to these resources in your AWS account through a service\-linked role called `AWSServiceRoleForAmazonInspector`\. For more information about service\-linked roles, see [Using Service\-Linked Roles for Amazon Inspector](inspector_slr.md) and [Using Service\-Linked Roles](http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)\. 
 
-   1. Installs an [Amazon Inspector agent](inspector_agents.md) on all available Amazon EC2 instances in your AWS account and AWS region\. 
+   1. If applicable, installs an [Amazon Inspector agent](inspector_agents.md) on all available Amazon EC2 instances in your AWS account and AWS region\. 
 **Note**  
 The service installs an Amazon Inspector agent only on those EC2 instances that allow System Manager Run Command\. To use this option, make sure that all of your EC2 instances in the current AWS account and AWS region have the SSM Agent installed and has an IAM role that allows Run Command\. For more information, see [To install the Amazon Inspector Agent on multiple EC2 instances using the Systems Manager Run Command](inspector_installing-uninstalling-agents.md#install-run-command)\.
 
@@ -46,7 +46,7 @@ The service installs an Amazon Inspector agent only on those EC2 instances that 
 
 ## Advanced Setup<a name="inspector_custom-assessment"></a>
 
-The following procedure shows you how to complete the advanced Amazon Inspector setup wizard to choose specific Amazon EC2 instances, rules packages, and scheduling parameters to include in an assessment target and template\.
+The following procedure shows you how to complete the advanced Amazon Inspector setup guide to choose specific Amazon EC2 instances, rules packages, and scheduling parameters to include in an assessment target and template\.
 
 1. On the **Welcome** page, choose **Advanced setup**\.
 
