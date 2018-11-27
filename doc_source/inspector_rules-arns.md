@@ -111,7 +111,7 @@
 | --- | --- | 
 | Common Vulnerabilities and Exposures | arn:aws:inspector:eu\-west\-1:357557129151:rulespackage/0\-ubA5XvBh | 
 | CIS Operating System Security Configuration Benchmarks | arn:aws:inspector:eu\-west\-1:357557129151:rulespackage/0\-sJBhCr0F | 
-| Network Reachability | arn:aws:inspector:us\-west\-1:166987590008:rulespackage/0\-TxmXimXF | 
+| Network Reachability | arn:aws:inspector:eu\-west\-1:357557129151:rulespackage/0\-SPzU33xe | 
 | Security Best Practices | arn:aws:inspector:eu\-west\-1:357557129151:rulespackage/0\-SnojL3Z6 | 
 | Runtime Behavior Analysis | arn:aws:inspector:eu\-west\-1:357557129151:rulespackage/0\-lLmwe1zd | 
 
