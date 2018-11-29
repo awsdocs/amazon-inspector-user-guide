@@ -122,7 +122,7 @@ To set up automatic assessment runs using the AWS Lambda console, perform the fo
 
 1. From the navigation pane on the left, choose either **Dashboard** or **Functions**, and then choose **Create a Lambda Function**\. 
 
-1. On the **Select blueprint** page, choose the **inspector\-scheduled\-run** blueprint\. You can find this blueprint by typing **inspector** in the **Filter** field\.
+1. On the **Select AWS Serverless Application Repository** page, choose the **inspector\-scheduled\-run** blueprint\. You can find this blueprint by typing **inspector** in the **Filter** field\.
 
 1. On the **Configure triggers** page, set up a recurring schedule for automated assessment runs by specifying a CloudWatch event that triggers your function\. To do this, type a rule name and description, and then choose a schedule expression\. The schedule expression determines how often the run will occur, for example, every 15 minutes or once a day\. For more information about CloudWatch events and concepts, see [What is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)
 
