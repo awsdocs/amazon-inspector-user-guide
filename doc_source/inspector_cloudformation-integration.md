@@ -1,9 +1,9 @@
 # Configuring Amazon Inspector Using AWS CloudFormation<a name="inspector_cloudformation-integration"></a>
 
-The following topics contains reference information for all Amazon Inspector resources that are supported by AWS CloudFormation:
-+ [AWS::Inspector::AssessmentTarget](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html)
-+ [AWS::Inspector::AssessmentTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html)
-+ [AWS::Inspector::ResourceGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html)
+For reference information about Amazon Inspector resources that are supported by AWS CloudFormation, see the following topics:
++ [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html)
++ [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html)
++ [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html)
 
 **Important**  
-For reference information on all Amazon Inspector rules packages' ARNs in all supported regions, see [Appendix \- Amazon Inspector Rules Packages' ARNs](inspector_rules-arns.md)\.
+For lists of the ARNs of Amazon Inspector rules packages in supported AWS Regions, see [Amazon Inspector ARNS for Rules Packages](inspector_rules-arns.md)\.

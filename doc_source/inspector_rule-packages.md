@@ -2,7 +2,7 @@
 
 You can use Amazon Inspector to assess your assessment targets \(collections of AWS resources\) for potential security issues and vulnerabilities\. Amazon Inspector compares the behavior and the security configuration of the assessment targets to selected security *rules packages*\. In the context of Amazon Inspector, a *rule* is a security check that Amazon Inspector performs during the assessment run\.
 
-In Amazon Inspector, rules are grouped together into distinct *rules packages* either by category, severity, or pricing\. This gives you choices for the kinds of analysis that you can perform\. For example, Amazon Inspector offers a large number of rules that you can use to assess your applications\. But you might want to include a smaller subset of the available rules to target a specific area of concern or to uncover specific security problems\. Companies with large IT departments might want to determine whether their application is exposed to any security threat, while others might want to concentrate only on issues with the severity level of **High**\.
+In Amazon Inspector, rules are grouped into distinct *rules packages* either by category, severity, or pricing\. This gives you choices for the kinds of analysis that you can perform\. For example, Amazon Inspector offers a large number of rules that you can use to assess your applications\. But you might want to include a smaller subset of the available rules to target a specific area of concern or to uncover specific security problems\. Companies with large IT departments might want to determine whether their application is exposed to any security threat\. Others might want to focus only on issues with the severity level of **High**\.
 + [Severity Levels for Rules in Amazon Inspector](#SeverityLevels)
 + [Rules Packages in Amazon Inspector](#InspectorRulePackages)
 
@@ -16,7 +16,7 @@ Each Amazon Inspector rule has an assigned severity level\. This reduces the nee
 
 ## Rules Packages in Amazon Inspector<a name="InspectorRulePackages"></a>
 
-An Inspector assessment can use any combination of the following rules packages:
+An Amazon Inspector assessment can use any combination of the following rules packages:
 
 **Network assessments:**
 + [Network Reachability](inspector_network-reachability.md)
@@ -24,5 +24,5 @@ An Inspector assessment can use any combination of the following rules packages:
 **Host assessments:**
 + [Common Vulnerabilities and Exposures](inspector_cves.md)
 + [Center for Internet Security \(CIS\) Benchmarks](inspector_cis.md)
-+ [Security Best Practices](inspector_security-best-practices.md)
++ [Security Best Practices for Amazon Inspector](inspector_security-best-practices.md)
 + [Runtime Behavior Analysis](inspector_runtime-behavior-analysis.md)

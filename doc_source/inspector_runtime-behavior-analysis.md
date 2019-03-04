@@ -1,77 +1,77 @@
 # Runtime Behavior Analysis<a name="inspector_runtime-behavior-analysis"></a>
 
-These rules analyze the behavior of your instances during an assessment run, and provide guidance about how to make your EC2 instances more secure\.
+The rules in the Runtime Behavior Analysis rules package analyze the behavior of your instances during an assessment run\. They also provide guidance about how to make your EC2 instances more secure\.
 
-For more information, see [Rules Packages Availability Across Supported Operating Systems](inspector_rule-packages_across_os.md)\.
+For more information, see [Amazon Inspector Rules Packages for Supported Operating Systems](inspector_rule-packages_across_os.md)\.
 
 **Topics**
-+ [Insecure Client Protocols \(Login\)](#insecure-client-protocols-login)
-+ [Insecure Client Protocols \(General\)](#insecure-client-protocols-general)
++ [Non\-Secure Client Protocols \(Login\)](#insecure-client-protocols-login)
++ [Non\-Secure Client Protocols \(General\)](#insecure-client-protocols-general)
 + [Unused Listening TCP Ports](#unused-tcp-ports)
-+ [Insecure Server Protocols](#insecure-protocols)
-+ [Software Without DEP](#dep-os)
-+ [Root Process with Insecure Permissions](#root-process-with-insecure-permissions)
++ [Non\-Secure Server Protocols](#insecure-protocols)
++ [Software Without Data Execution Prevention \(DEP\)](#dep-os)
++ [Root Process with Non\-Secure Permissions](#root-process-with-insecure-permissions)
 
-## Insecure Client Protocols \(Login\)<a name="insecure-client-protocols-login"></a>
+## Non\-Secure Client Protocols \(Login\)<a name="insecure-client-protocols-login"></a>
 
 This rule detects a client's use of insecure protocols to log in to remote machines\.
 
 **Important**  
-In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
+Currently, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 This rule generates findings for the EC2 instances that are running either Linux\-based or Windows\-based operating systems\.
 
 ### Severity: [Medium](inspector_rule-packages.md#SeverityLevels)<a name="insecure-client-protocols-login-severity"></a>
 
 ### Finding<a name="insecure-client-protocols-login-finding"></a>
 
-An EC2 instance in your assessment target uses insecure protocols to connect to a remote host for login\. These protocols pass credentials in the clear, increasing the risk of credential theft\.
+An EC2 instance in your assessment target uses insecure protocols to connect to a remote host for login\. These protocols do not secure credentials in the clear, increasing the risk of credential theft\.
 
 ### Resolution<a name="insecure-client-protocols-login-resolution"></a>
 
 It is recommended that you replace these insecure protocols with secure protocols, such as SSH\.
 
-## Insecure Client Protocols \(General\)<a name="insecure-client-protocols-general"></a>
+## Non\-Secure Client Protocols \(General\)<a name="insecure-client-protocols-general"></a>
 
-This rule detects a client's use of insecure protocols\.
+This rule detects a client's use of non\-secure protocols\.
 
 **Important**  
-In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
+Currently, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 This rule generates findings for the EC2 instances that are running either Linux\-based or Windows\-based operating systems\.
 
 ### Severity: [Low](inspector_rule-packages.md#SeverityLevels)<a name="insecure-client-protocols-general-severity"></a>
 
 ### Finding<a name="insecure-client-protocols-general-finding"></a>
 
-An EC2 instance in your assessment target uses insecure protocols to connect to a remote host\. These protocols pass traffic in the clear, increasing the risk of a successful traffic interception attack\. 
+An EC2 instance in your assessment target uses non\-secure protocols to connect to a remote host\. These protocols do not secure traffic, increasing the risk of a successful traffic interception attack\. 
 
 ### Resolution<a name="insecure-client-protocols-general-resolution"></a>
 
-It is recommended that you replace these insecure protocols with encrypted versions\.
+It is recommended that you replace these non\-secure protocols with encrypted versions\.
 
 ## Unused Listening TCP Ports<a name="unused-tcp-ports"></a>
 
-This rule detects listening TCP ports that may not be required by the assessment target\.
+This rule detects listening TCP ports that might not be required by the assessment target\.
 
 **Important**  
-In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
+Currently, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 This rule generates findings for the EC2 instances that are running either Linux\-based or Windows\-based operating systems\.
 
 ### Severity: [Informational](inspector_rule-packages.md#SeverityLevels)<a name="unused-tcp-ports-severity"></a>
 
 ### Finding<a name="unused-tcp-ports-finding"></a>
 
-An EC2 instance in your assessment target is listening on TCP ports but no traffic to these ports was seen during the assessment run\.
+An EC2 instance in your assessment target is listening on TCP ports, but Amazon Inspector didn't discover any traffic to these ports during the assessment run\.
 
 ### Resolution<a name="unused-tcp-ports-resolution"></a>
 
 To reduce the attack surface area of your deployments, we recommend that you disable network services that you do not use\. Where network services are required, we recommend that you employ network control mechanisms such as VPC ACLs, EC2 security groups, and firewalls to limit exposure of that service\.
 
-## Insecure Server Protocols<a name="insecure-protocols"></a>
+## Non\-Secure Server Protocols<a name="insecure-protocols"></a>
 
-This rule helps determine whether your EC2 instances allow support for insecure and unencrypted ports/services such as FTP, Telnet, HTTP, IMAP, POP version 3, SMTP, SNMP versions 1 and 2, rsh, and rlogin\.
+This rule helps determine whether your EC2 instances allow support for non\-secure and unencrypted ports or services such as FTP, Telnet, HTTP, IMAP, POP version 3, SMTP, SNMP versions 1 and 2, RSH, and `rlogin`\.
 
 **Important**  
-In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
+Currently, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 This rule generates findings for the EC2 instances that are running either Linux\-based or Windows\-based operating systems\.
 
 ### Severity: [Informational](inspector_rule-packages.md#SeverityLevels)<a name="insecure-protocols-severity"></a>
@@ -82,19 +82,19 @@ An EC2 instance in your assessment target is configured to support insecure prot
 
 ### Resolution<a name="insecure-protocols-resolution"></a>
 
-We recommend that you disable insecure protocols that are supported on an EC2 instance in your assessment target and replace them with secure alternatives as listed below:
-+ Disable Telnet, rsh, and rlogin and replace them with SSH\. Where this is not possible, you should ensure that the insecure service is protected by appropriate network access controls such as VPC network ACLs and EC2 security groups\.
+We recommend that you disable non\-secure protocols that are supported on an EC2 instance in your assessment target, and replace them with more secure alternatives as listed below:
++ Disable Telnet, RSH, and `rlogin` and replace them with SSH\. Where this is not possible, you should ensure that the non\-secure service is protected by appropriate network access controls such as VPC network ACLs and EC2 security groups\.
 + Replace FTP with SCP or SFTP where possible\. Where this is not possible, you should ensure that the FTP server is protected by appropriate network access controls such as VPC network ACLs and EC2 security groups\.
-+ Replace HTTP with HTTPS where possible\. For more information specific to the web server in question, see http://nginx\.org/en/docs/http/configuring\_https\_servers\.html and http://httpd\.apache\.org/docs/2\.4/ssl/ssl\_howto\.html\.
++ Replace HTTP with HTTPS where possible\. For more information specific to the web server in question, see `http://nginx.org/en/docs/http/configuring_https_servers.html` and `http://httpd.apache.org/docs/2.4/ssl/ssl_howto.html`\.
 + Disable IMAP, POP3, and SMTP services if not required\. If required, we recommend that these email protocols are used with encrypted protocols such as TLS\.
 + Disable SNMP service if not required\. If required, replace SNMP v1and v2 with the more secure SNMP v3, which uses encrypted communication\.
 
-## Software Without DEP<a name="dep-os"></a>
+## Software Without Data Execution Prevention \(DEP\)<a name="dep-os"></a>
 
 This rule detects the presence of third\-party software that is compiled without support for Data Execution Prevention \(DEP\)\. DEP increases system security by defending against stack\-based buffer overflow and other memory corruption attacks\.
 
 **Important**  
-In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
+Currently, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 During an assessment run, this rule generates findings **only** for the EC2 instances that are running Linux\-based operating systems\. This rule does NOT generate findings for EC2 instances that are running Windows\-based operating systems\.
 
 ### Severity: [Medium](inspector_rule-packages.md#SeverityLevels)<a name="dep-os-severity"></a>
@@ -105,14 +105,14 @@ There are executable files on an EC2 instance in your assessment target that do 
 
 ### Resolution<a name="dep-os-resolution"></a>
 
-It is recommended that you uninstall this software from your assessment target if you are not using it, or contact the vendor to get an updated version of this software with DEP enabled\.
+We recommend that you uninstall this software from your assessment target if you are not using it, or contact the vendor to get an updated version of this software with DEP enabled\.
 
-## Root Process with Insecure Permissions<a name="root-process-with-insecure-permissions"></a>
+## Root Process with Non\-Secure Permissions<a name="root-process-with-insecure-permissions"></a>
 
 This rule helps detect root processes that load modules that can be modified by unauthorized users\.
 
 **Important**  
-In this release of Amazon Inspector, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
+Currently, you can include in your assessment targets EC2 instances that are running either Linux\-based or Windows\-based operating systems\.   
 During an assessment run, this rule generates findings **only** for the EC2 instances that are running Linux\-based operating systems\. This rule does NOT generate findings for EC2 instances that are running Windows\-based operating systems\.
 
 ### Severity: [High](inspector_rule-packages.md#SeverityLevels)<a name="root-process-with-insecure-permissions-severity"></a>
@@ -123,4 +123,4 @@ There is an instance in your assessment target with one or more root\-owned proc
 
 ### Resolution<a name="root-process-with-insecure-permissions-resolution"></a>
 
-To improve the security of your assessment target, it is recommended that you correct the permissions on the relevant modules to ensure that they are writable only by root\.
+To improve the security of your assessment target, we recommend that you correct the permissions on the relevant modules to ensure that they are writable only by the root user\.

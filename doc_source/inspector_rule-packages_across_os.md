@@ -1,6 +1,6 @@
-# Rules Packages Availability Across Supported Operating Systems<a name="inspector_rule-packages_across_os"></a>
+# Amazon Inspector Rules Packages for Supported Operating Systems<a name="inspector_rule-packages_across_os"></a>
 
-The following table describes Amazon Inspector rules packages' availability across supported operating systems that you can run on the EC2 instances included in your assessment targets\.
+You can run Amazon Inspector rules packages on the EC2 instances that are included in your assessment targets\. The following table shows the availability of rules packages for supported operating systems\. 
 
 **Important**  
 You can run an agentless assessment with the [Network Reachability](inspector_network-reachability.md) rules package on any EC2 instance regardless of operating system\.
@@ -29,8 +29,9 @@ For more information about supported operating systems, see [Amazon Inspector Su
 |  Ubuntu 16\.04 LTS  |  Supported  | Supported |  Supported  |  Supported  |  Supported  | 
 |  Ubuntu 14\.04 LTS  |  Supported  | Supported |  Supported  |  Supported  | Supported | 
 |  Debian 9\.0 \- 9\.5, 8\.0 \- 8\.7  |  Supported  |  |  Supported  | Supported |  | 
-|  RHEL 7\.6  |  Supported  | Supported |  Supported  |  Supported  |   | 
+|  RHEL 7\.6  |  Supported  | Supported |  Supported  |  Supported  |  | 
 |  RHEL 6\.2 \- 6\.9, 7\.2 \- 7\.5   |  Supported  | Supported |  Supported  |  Supported  |  Supported  | 
+|  CentOS 7\.6  |  Supported  | Supported |  Supported  |  Supported  |  | 
 |  CentOS 6\.2 \- 6\.9, 7\.2 \- 7\.5   |  Supported  | Supported |  Supported  |  Supported  |  Supported  | 
 |  Windows Server 2012 R2  |  Supported  |  Supported  |  Supported  |   |  Supported  | 
 |  Windows Server 2012  |  Supported  |  Supported  |  Supported  |   |  Supported  | 
