@@ -1,7 +1,7 @@
 # Amazon Inspector User Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -34,7 +34,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Network Reachability](inspector_network-reachability.md)
    + [Common Vulnerabilities and Exposures](inspector_cves.md)
    + [Center for Internet Security (CIS) Benchmarks](inspector_cis.md)
-   + [Runtime Behavior Analysis](inspector_runtime-behavior-analysis.md)
    + [Security Best Practices for Amazon Inspector](inspector_security-best-practices.md)
 + [Amazon Inspector Assessment Templates and Assessment Runs](inspector_assessments.md)
 + [Amazon Inspector Findings](inspector_findings.md)

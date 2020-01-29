@@ -11,6 +11,8 @@ The rules included in this package help you assess whether your EC2 instances ar
 + [US West \(Oregon\)](https://s3-us-west-2.amazonaws.com/rules-engine.us-west-2/CVEList.txt)
 + [EU \(Ireland\)](https://s3-eu-west-1.amazonaws.com/rules-engine.eu-west-1/CVEList.txt)
 + [EU \(Frankfurt\)](https://s3.eu-central-1.amazonaws.com/rules-engine.eu-central-1/CVEList.txt)
++ [EU \(London\)](https://s3.eu-west-2.amazonaws.com/rules-engine.eu-west-2/CVEList.txt)
++ [EU \(Stockholm\)](https://s3.eu-north-1.amazonaws.com/rules-engine.eu-north-1/CVEList.txt)
 + [Asia Pacific \(Tokyo\)](https://s3-ap-northeast-1.amazonaws.com/rules-engine.ap-northeast-1/CVEList.txt)
 + [Asia Pacific \(Seoul\)](https://s3.ap-northeast-2.amazonaws.com/rules-engine.ap-northeast-2/CVEList.txt)
 + [Asia Pacific \(Mumbai\)](https://s3.ap-south-1.amazonaws.com/rules-engine.ap-south-1/CVEList.txt)

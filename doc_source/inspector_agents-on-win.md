@@ -2,6 +2,9 @@
 
 You can start, stop, and modify the behavior of Amazon Inspector agents\. Sign in to your EC2 instance running a Windows\-based operating system and perform any of the procedures in this chapter\. For more information about the operating systems that are supported for Amazon Inspector, see [Amazon Inspector Supported Operating Systems and Regions](inspector_supported_os_regions.md)\.
 
+**Important**  
+The Amazon Inspector agent relies on Amazon EC2 instance metadata to function correctly\. It accesses instance metadata using version 1 of the Instance Metadata Service \(IMDSv1\)\. See [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) to learn more about EC2 instance metadata and access methods\. If you attach a resource policy that enforces IMDSv2 only access, then the Inspector agent will not function correctly\. In this case, the Inspector service will report the agent’s status as unhealthy and will be unable to assess the instance\.
+
 **Note**  
 The commands in this chapter function in all AWS Regions that are supported by Amazon Inspector\.
 
@@ -40,6 +43,9 @@ We highly recommend that you modify the `agent.cfg` file only with the guidance 
 
 To get proxy support for an agent on a Windows\-based operating system, use the `WinHTTP` proxy\. To set up the `WinHTTP` proxy using the `netsh` utility, see [https://technet\.microsoft\.com/en\-us/library/cc731131%28v=ws\.10%29\.aspx](https://technet.microsoft.com/en-us/library/cc731131%28v=ws.10%29.aspx)\.
 
+**Important**  
+Only HTTPS proxies are supported for Windows\-based instances\.
+
 Complete one of the following procedures:
 
 **To install an agent on an EC2 instance that uses a proxy server**
@@ -52,7 +58,7 @@ Complete one of the following procedures:
 
 **To configure proxy support on an EC2 instance with a running agent**
 
-1. To configure proxy support, the version of the Amazon Inspector agent that is running on your EC2 instance must be 1\.0\.0\.59 or later\. If you enabled the auto\-update process for the agent, you can verify that your agent's version is 1\.0\.0\.59 or later by using the[Starting or Stopping an Amazon Inspector Agent or Verifying That the Agent is Running](#stop-start-windows) procedure\. If you didn't enable the auto\-update process for the agent, you must install the agent on this EC2 instance again by following the [Installing the Agent on a Windows\-based EC2 Instance](inspector_installing-uninstalling-agents.md#install-windows) procedure\.
+1. To configure proxy support, the version of the Amazon Inspector agent that is running on your EC2 instance must be 1\.0\.0\.59 or later\. If you enabled the auto\-update process for the agent, you can verify that your agent's version is 1\.0\.0\.59 or later by using the [Starting or Stopping an Amazon Inspector Agent or Verifying That the Agent is Running](#stop-start-windows) procedure\. If you didn't enable the auto\-update process for the agent, you must install the agent on this EC2 instance again by following the [Installing the Agent on a Windows\-based EC2 Instance](inspector_installing-uninstalling-agents.md#install-windows) procedure\.
 
 1. Open the registry editor \(`regedit.exe`\)\.
 

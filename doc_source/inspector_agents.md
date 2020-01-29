@@ -1,26 +1,38 @@
 # Amazon Inspector Agents<a name="inspector_agents"></a>
 
-To fully assess the security of the EC2 instances that make up your Amazon Inspector assessment targets, you can install the Amazon Inspector agent on each instance\. The agent monitors the behavior \(including network, file system, and process activity\) of the instance\. It also collects behavior and configuration data \(telemetry\)\.
+The Amazon Inspector agent is an entity that collects and monitors the behavioral data \(including network configuration, file system security, and process activity\) of an Amazon EC2 instance\. Though not required in all cases, you should install the Amazon Inspector agent on each of your target Amazon EC2 instances in order to fully assess their security\.
 
 For more information about how to install, uninstall, and reinstall the agent, how to verify whether the installed agent is running, and how to configure proxy support for the agent, see [Working with Amazon Inspector Agents on Linux\-based Operating Systems](inspector_agents-on-linux.md) and [Working with Amazon Inspector Agents on Windows\-based Operating Systems](inspector_agents-on-win.md)\.
 
 **Note**  
 An Amazon Inspector agent is not required to run the [Network Reachability](inspector_network-reachability.md) rules package\.
 
+**Important**  
+The Amazon Inspector agent relies on Amazon EC2 instance metadata to function correctly\. It accesses instance metadata using version 1 of the Instance Metadata Service \(IMDSv1\)\. See [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) to learn more about EC2 instance metadata and access methods\. If you attach a resource policy that enforces IMDSv2 only access, then the Inspector agent will not function correctly\. In this case, the Inspector service will report the agent’s status as unhealthy and will be unable to assess the instance\.
+
+**Topics**
++ [Amazon Inspector Agent Privileges](#agent-privileges)
++ [Network and Amazon Inspector Agent Security](#agent-security)
++ [Amazon Inspector Agent Updates](#agent-updates)
++ [Telemetry Data Lifecycle](#telemetry-data-lifecycle)
++ [Access Control from Amazon Inspector into AWS Accounts](#access-control)
++ [Amazon Inspector Agent Limits](#agent-limits)
++ [Amazon Inspector Agent Public Licensing](#agent-license)
++ [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)
++ [Working with Amazon Inspector Agents on Linux\-based Operating Systems](inspector_agents-on-linux.md)
++ [Working with Amazon Inspector Agents on Windows\-based Operating Systems](inspector_agents-on-win.md)
++ [\(Optional\) Verify the Signature of the Amazon Inspector Agent Installation Script on Linux\-based Operating Systems](inspector_verify-sig-agent-download-linux.md)
++ [\(Optional\) Verify the Signature of the Amazon Inspector Agent Installation Script on Windows\-based Operating Systems](inspector_verify-sig-agent-download-win.md)
+
 ## Amazon Inspector Agent Privileges<a name="agent-privileges"></a>
 
 You must have administrative or root permissions to install the Amazon Inspector agent\. On supported Linux\-based operating systems, the agent consists of a user mode executable that runs with root access and a kernel module that is required for the agent to function\. On supported Windows\-based operating systems, the agent consists of an updater service and an agent service, each running in user mode with `LocalSystem` privileges\. The agent also includes a kernel mode driver that is required for the agent to function\.
 
-**Important**  
-The following list contains all kernel versions that are compatible with the Amazon Inspector agent running on Linux, Ubuntu, Red Hat Enterprise Linux, and CentOS: [https://s3\.amazonaws\.com/aws\-agent\.us\-east\-1/linux/support/supported\_versions\.json](https://s3.amazonaws.com/aws-agent.us-east-1/linux/support/supported_versions.json)\.  
-You can run an Amazon Inspector assessment of an EC2 instance with a Linux\-based OS using either the [CVE](inspector_cves.md), [CIS](inspector_cis.md), or [Security Best Practices](inspector_security-best-practices.md) rules packages\. The assessment is successful even if your instance doesn't have a kernel version that is included in the list\.  
-To run a successful assessment of an EC2 instance with a Linux\-based OS using the [Runtime Behavior Analysis](inspector_runtime-behavior-analysis.md) rules package, your instance must have a kernel version that is included in the list\. If your instance has a kernel version that is not compatible with the agent, the [Runtime Behavior Analysis](inspector_runtime-behavior-analysis.md) rules package that assesses the EC2 instance results in only one finding\. The finding informs you that the kernel version of your EC2 instance is not supported\. 
-
 ## Network and Amazon Inspector Agent Security<a name="agent-security"></a>
 
-The Amazon Inspector agent initiates all communication with the Amazon Inspector service\. This means that the agent must have an outbound network path to a public endpoint so that it can send telemetry data to the endpoint\. For example, the agent might be `arsenal.<region>.amazonaws.com`, and the endpoint might be an Amazon S3 bucket at `s3.dualstack.aws-region.amazonaws.com`\. \(Make sure to replace `<region>` with the actual AWS Region where you are running Amazon Inspector\.\) For more information, see [AWS IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\. Because all connections from the agent are established outbound, it is not necessary to open ports in your security groups to allow inbound communications to the agent from Amazon Inspector\. 
+The Amazon Inspector agent initiates nearly all communication with the Amazon Inspector service\. This means that the agent must have an outbound network path to a public endpoint so that it can send telemetry data to the endpoint\. For example, the agent might be `arsenal.<region>.amazonaws.com`, and the endpoint might be an Amazon S3 bucket at `s3.dualstack.aws-region.amazonaws.com`\. \(Make sure to replace `<region>` with the actual AWS Region where you are running Amazon Inspector\.\) For more information, see [AWS IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\. Because all connections from the agent are established outbound, it is not necessary to open ports in your security groups to allow inbound communications to the agent from Amazon Inspector\. 
 
-The agent periodically communicates with Amazon Inspector over a TLS\-protected channel that is authenticated using either the AWS identity associated with the role of the EC2 instance, if present, or with the instance metadata document if no role is assigned to the instance\. When authenticated, the agent sends heartbeat messages to the service and receives instructions from the service as responses to the heartbeat messages\. If an assessment has been scheduled, the agent receives the instructions for that assessment\. These instructions are structured JSON files, and they tell the agent to enable or disable specific preconfigured sensors in the agent\. Each instruction action is predefined within the agent\. Arbitrary instructions can't be executed\. 
+The agent periodically communicates with Amazon Inspector over a TLS\-protected channel, which is authenticated using either the AWS identity associated with the role of the EC2 instance, or, if no role is assigned, with the instance's metadata document\. When authenticated, the agent sends heartbeat messages to the service and receives instructions from the service in response\. If an assessment has been scheduled, the agent receives the instructions for that assessment\. These instructions are structured JSON files, and they tell the agent to enable or disable specific preconfigured sensors in the agent\. Each instruction action is predefined within the agent\. Arbitrary instructions can't be executed\. 
 
 During an assessment, the agent gathers telemetry data from the system to send back to Amazon Inspector over a TLS\-protected channel\. The agent doesn't make changes to the system that it collects data from\. After the agent collects the telemetry data, it sends the data back to Amazon Inspector for processing\. Beyond the telemetry data that it generates, the agent is not capable of collecting or transmitting any other data about the system or assessment targets\. Currently, there is no method exposed for intercepting and examining telemetry data at the agent\.
 

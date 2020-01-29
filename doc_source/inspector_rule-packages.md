@@ -25,4 +25,3 @@ An Amazon Inspector assessment can use any combination of the following rules pa
 + [Common Vulnerabilities and Exposures](inspector_cves.md)
 + [Center for Internet Security \(CIS\) Benchmarks](inspector_cis.md)
 + [Security Best Practices for Amazon Inspector](inspector_security-best-practices.md)
-+ [Runtime Behavior Analysis](inspector_runtime-behavior-analysis.md)
