@@ -17,7 +17,6 @@ The Amazon Inspector agent relies on Amazon EC2 instance metadata to function co
 + [Telemetry Data Lifecycle](#telemetry-data-lifecycle)
 + [Access Control from Amazon Inspector into AWS Accounts](#access-control)
 + [Amazon Inspector Agent Limits](#agent-limits)
-+ [Amazon Inspector Agent Public Licensing](#agent-license)
 + [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)
 + [Working with Amazon Inspector Agents on Linux\-based Operating Systems](inspector_agents-on-linux.md)
 + [Working with Amazon Inspector Agents on Windows\-based Operating Systems](inspector_agents-on-win.md)
@@ -26,11 +25,11 @@ The Amazon Inspector agent relies on Amazon EC2 instance metadata to function co
 
 ## Amazon Inspector Agent Privileges<a name="agent-privileges"></a>
 
-You must have administrative or root permissions to install the Amazon Inspector agent\. On supported Linux\-based operating systems, the agent consists of a user mode executable that runs with root access and a kernel module that is required for the agent to function\. On supported Windows\-based operating systems, the agent consists of an updater service and an agent service, each running in user mode with `LocalSystem` privileges\. The agent also includes a kernel mode driver that is required for the agent to function\.
+You must have administrative or root permissions to install the Amazon Inspector agent\. On supported Linux\-based operating systems, the agent consists of a user mode executable that runs with root access\. On supported Windows\-based operating systems, the agent consists of an updater service and an agent service, each running in user mode with `LocalSystem` privileges\.
 
 ## Network and Amazon Inspector Agent Security<a name="agent-security"></a>
 
-The Amazon Inspector agent initiates nearly all communication with the Amazon Inspector service\. This means that the agent must have an outbound network path to a public endpoint so that it can send telemetry data to the endpoint\. For example, the agent might be `arsenal.<region>.amazonaws.com`, and the endpoint might be an Amazon S3 bucket at `s3.dualstack.aws-region.amazonaws.com`\. \(Make sure to replace `<region>` with the actual AWS Region where you are running Amazon Inspector\.\) For more information, see [AWS IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\. Because all connections from the agent are established outbound, it is not necessary to open ports in your security groups to allow inbound communications to the agent from Amazon Inspector\. 
+The Amazon Inspector agent initiates all communication with the Amazon Inspector service\. This means that the agent must have an outbound network path to public endpoints so that it can send telemetry data\. For example, the agent might connect to `arsenal.<region>.amazonaws.com`, or the endpoint might be an Amazon S3 bucket at `s3.dualstack.<region>.amazonaws.com`\. Make sure to replace `<region>` with the actual AWS Region where you are running Amazon Inspector\. For more information, see [AWS IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\. Because all connections from the agent are established outbound, it is not necessary to open ports in your security groups to allow inbound communications to the agent from Amazon Inspector\. 
 
 The agent periodically communicates with Amazon Inspector over a TLS\-protected channel, which is authenticated using either the AWS identity associated with the role of the EC2 instance, or, if no role is assigned, with the instance's metadata document\. When authenticated, the agent sends heartbeat messages to the service and receives instructions from the service in response\. If an assessment has been scheduled, the agent receives the instructions for that assessment\. These instructions are structured JSON files, and they tell the agent to enable or disable specific preconfigured sensors in the agent\. Each instruction action is predefined within the agent\. Arbitrary instructions can't be executed\. 
 
@@ -53,9 +52,3 @@ As a security service, Amazon Inspector accesses your AWS accounts and resources
 ## Amazon Inspector Agent Limits<a name="agent-limits"></a>
 
 For information about Amazon Inspector agent limits, see [Amazon Inspector Service Limits](inspector_limits.md)\.
-
-## Amazon Inspector Agent Public Licensing<a name="agent-license"></a>
-
-The Amazon Inspector agent uses a kernel module \(`amznmon64`\) as a component of the overall agent\. This kernel module uses a general public license \([GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)\)\. The module source code and licensing information are publicly available and can be accessed here: 
-+ Source code: [https://s3\.amazonaws\.com/aws\-agent\.us\-east\-1/linux/support/AwsAgentKernelModule\.tar\.gz](https://s3.amazonaws.com/aws-agent.us-east-1/linux/support/AwsAgentKernelModule.tar.gz)
-+ Signature file: [https://s3\.amazonaws\.com/aws\-agent\.us\-east\-1/linux/support/AwsAgentKernelModule\.tar\.gz\.sig](https://s3.amazonaws.com/aws-agent.us-east-1/linux/support/AwsAgentKernelModule.tar.gz.sig)

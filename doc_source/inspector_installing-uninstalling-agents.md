@@ -5,7 +5,7 @@ You can install the Amazon Inspector agent using the [Systems Manager Run Comman
 As another option, you can quickly install the agent on all Amazon EC2 instances included in an assessment target by selecting the **Install Agents** check box on the **Define an Assessment target** page on the console\.
 
 **Topics**
-+ [Amazon Linux AMI with the Amazon Inspector Agent](#ami-with-agent)
++ [Amazon Linux 2 AMI with the Amazon Inspector Agent](#ami-with-agent)
 + [Installing the Agent on Multiple EC2 Instances Using the Systems Manager Run Command](#install-run-command)
 + [Installing the Agent on a Linux\-based EC2 Instance](#install-linux)
 + [Installing the Agent on a Windows\-based EC2 Instance](#install-windows)
@@ -13,13 +13,13 @@ As another option, you can quickly install the agent on all Amazon EC2 instances
 **Note**  
 The procedures in this chapter apply to all AWS Regions that are supported by Amazon Inspector\.
 
-## Amazon Linux AMI with the Amazon Inspector Agent<a name="ami-with-agent"></a>
+## Amazon Linux 2 AMI with the Amazon Inspector Agent<a name="ami-with-agent"></a>
 
-To skip the manual Amazon Inspector agent installation on the Amazon Linux EC2 instances that you want to include in your assessment targets, you can use the **Amazon Linux AMI with Amazon Inspector Agent**\. This AMI has the agent preinstalled and requires no additional steps to install or set up the agent\. To start using Amazon Inspector with these EC2 instances, tag them to match the assessment target that you want\. The configuration of **Amazon Linux AMI with Amazon Inspector Agent** enhances security by focusing on two main security goals: limiting access and reducing software vulnerabilities\. 
+To skip the manual Amazon Inspector agent installation on the Amazon Linux EC2 instances that you want to include in your assessment targets, you can use the **Amazon Linux 2 AMI with Amazon Inspector Agent**\. This AMI has the agent preinstalled and requires no additional steps to install or set up the agent\. To start using Amazon Inspector with these EC2 instances, tag them to match the assessment target that you want\. The configuration of **Amazon Linux 2 AMI with Amazon Inspector Agent** enhances security by focusing on two main security goals: limiting access and reducing software vulnerabilities\. 
 
 This is the only currently available EC2 instance AMI with the preinstalled Amazon Inspector agent\. For the EC2 instances that run Ubuntu Server or Windows Server, you must complete the manual agent installation steps\.
 
-The **Amazon Linux AMI with Amazon Inspector Agent** is available on the EC2 console and also at the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B077W1VR7G                 )\.
+The **Amazon Linux 2 AMI with Amazon Inspector Agent** is available on the EC2 console and also at the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B07PWHGXQG)\.
 
 ## Installing the Agent on Multiple EC2 Instances Using the Systems Manager Run Command<a name="install-run-command"></a>
 
