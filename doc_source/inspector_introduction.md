@@ -1,4 +1,4 @@
-# What Is Amazon Inspector?<a name="inspector_introduction"></a>
+# What is Amazon Inspector?<a name="inspector_introduction"></a>
 
 Amazon Inspector tests the network accessibility of your Amazon EC2 instances and the security state of your applications that run on those instances\. Amazon Inspector assesses applications for exposure, vulnerabilities, and deviations from best practices\. After performing an assessment, Amazon Inspector produces a detailed list of security findings that is organized by level of severity\. 
 
@@ -12,7 +12,7 @@ AWS doesn't guarantee that following the provided recommendations will resolve e
 **Note**  
 AWS is responsible for protecting the global infrastructure that runs the services offered in the AWS Cloud\. This infrastructure consists of the hardware, software, networking, and facilities that run AWS services\. AWS provides several reports from third\-party auditors who have verified our compliance with a variety of computer security standards and regulations\. For more information, see [AWS Cloud Compliance](https://aws.amazon.com/compliance)\. 
 
-For information about Amazon Inspector terminology, see [Amazon Inspector Terminology and Concepts](inspector_concepts.md)\.
+For information about Amazon Inspector terminology, see [Amazon Inspector terminology and concepts](inspector_concepts.md)\.
 
 ## Benefits of Amazon Inspector<a name="InspectorBenefits"></a>
 
@@ -28,7 +28,7 @@ Here are some of the main features of Amazon Inspector:
 + **Built\-in content library** – Amazon Inspector includes a built\-in library of rules and reports\. These include checks against best practices, common compliance standards, and vulnerabilities\. The checks include detailed recommended steps for resolving potential security issues\. 
 + **Automation through an API** – Amazon Inspector can be fully automated through an API\. This allows you to incorporate security testing into the development and design process, including selecting, executing, and reporting the results of those tests\. 
 
-## Amazon Inspector Pricing<a name="InspectorPricing"></a>
+## Amazon Inspector pricing<a name="InspectorPricing"></a>
 
 Amazon Inspector pricing is based on the number of EC2 instances included in each assessment and the rules packages used in those assessments\. For more information about Amazon Inspector pricing, see [Amazon Inspector Pricing](http://aws.amazon.com/inspector/pricing/)\.
 

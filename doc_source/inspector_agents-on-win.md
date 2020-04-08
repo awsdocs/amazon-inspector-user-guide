@@ -1,6 +1,6 @@
-# Working with Amazon Inspector Agents on Windows\-based Operating Systems<a name="inspector_agents-on-win"></a>
+# Working with Amazon Inspector agents on Windows\-based operating systems<a name="inspector_agents-on-win"></a>
 
-You can start, stop, and modify the behavior of Amazon Inspector agents\. Sign in to your EC2 instance running a Windows\-based operating system and perform any of the procedures in this chapter\. For more information about the operating systems that are supported for Amazon Inspector, see [Amazon Inspector Supported Operating Systems and Regions](inspector_supported_os_regions.md)\.
+You can start, stop, and modify the behavior of Amazon Inspector agents\. Sign in to your EC2 instance running a Windows\-based operating system and perform any of the procedures in this chapter\. For more information about the operating systems that are supported for Amazon Inspector, see [Amazon Inspector supported operating systems and Regions](inspector_supported_os_regions.md)\.
 
 **Important**  
 The Amazon Inspector agent relies on Amazon EC2 instance metadata to function correctly\. It accesses instance metadata using version 1 of the Instance Metadata Service \(IMDSv1\)\. See [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) to learn more about EC2 instance metadata and access methods\. If you attach a resource policy that enforces IMDSv2 only access, then the Inspector agent will not function correctly\. In this case, the Inspector service will report the agent’s status as unhealthy and will be unable to assess the instance\.
@@ -9,12 +9,12 @@ The Amazon Inspector agent relies on Amazon EC2 instance metadata to function co
 The commands in this chapter function in all AWS Regions that are supported by Amazon Inspector\.
 
 **Topics**
-+ [Starting or Stopping an Amazon Inspector Agent or Verifying That the Agent is Running](#stop-start-windows)
-+ [Modifying Amazon Inspector Agent Settings](#inspector-agent-modify-settings)
-+ [Configuring Proxy Support for an Amazon Inspector Agent](#inspector-agent-proxy)
-+ [Uninstalling the Amazon Inspector Agent](#uninstall-windows)
++ [Starting or stopping an Amazon Inspector agent or verifying that the agent is running](#stop-start-windows)
++ [Modifying Amazon Inspector agent settings](#inspector-agent-modify-settings)
++ [Configuring proxy support for an Amazon Inspector agent](#inspector-agent-proxy)
++ [Uninstalling the Amazon Inspector agent](#uninstall-windows)
 
-## Starting or Stopping an Amazon Inspector Agent or Verifying That the Agent is Running<a name="stop-start-windows"></a>
+## Starting or stopping an Amazon Inspector agent or verifying that the agent is running<a name="stop-start-windows"></a>
 
 **To start, stop, or verify an agent**
 
@@ -32,14 +32,14 @@ The commands in this chapter function in all AWS Regions that are supported by A
 
    This command returns the status of the currently running agent, or an error stating that the agent can't be contacted\.
 
-## Modifying Amazon Inspector Agent Settings<a name="inspector-agent-modify-settings"></a>
+## Modifying Amazon Inspector agent settings<a name="inspector-agent-modify-settings"></a>
 
 After the Amazon Inspector agent is installed and running on your EC2 instance, you can modify the settings in the `agent.cfg` file to alter the agent's behavior\. On Windows\-based operating systems, the file is located in the `C:\ProgramData\Amazon Web Services\AWS Agent` directory\. After you modify and save the `agent.cfg` file, you must stop and start the agent for the changes to take effect\.
 
 **Important**  
 We highly recommend that you modify the `agent.cfg` file only with the guidance of AWS Support\.
 
-## Configuring Proxy Support for an Amazon Inspector Agent<a name="inspector-agent-proxy"></a>
+## Configuring proxy support for an Amazon Inspector agent<a name="inspector-agent-proxy"></a>
 
 To get proxy support for an agent on a Windows\-based operating system, use the `WinHTTP` proxy\. To set up the `WinHTTP` proxy using the `netsh` utility, see [https://technet\.microsoft\.com/en\-us/library/cc731131%28v=ws\.10%29\.aspx](https://technet.microsoft.com/en-us/library/cc731131%28v=ws.10%29.aspx)\.
 
@@ -58,7 +58,7 @@ Complete one of the following procedures:
 
 **To configure proxy support on an EC2 instance with a running agent**
 
-1. To configure proxy support, the version of the Amazon Inspector agent that is running on your EC2 instance must be 1\.0\.0\.59 or later\. If you enabled the auto\-update process for the agent, you can verify that your agent's version is 1\.0\.0\.59 or later by using the [Starting or Stopping an Amazon Inspector Agent or Verifying That the Agent is Running](#stop-start-windows) procedure\. If you didn't enable the auto\-update process for the agent, you must install the agent on this EC2 instance again by following the [Installing the Agent on a Windows\-based EC2 Instance](inspector_installing-uninstalling-agents.md#install-windows) procedure\.
+1. To configure proxy support, the version of the Amazon Inspector agent that is running on your EC2 instance must be 1\.0\.0\.59 or later\. If you enabled the auto\-update process for the agent, you can verify that your agent's version is 1\.0\.0\.59 or later by using the [Starting or stopping an Amazon Inspector agent or verifying that the agent is running](#stop-start-windows) procedure\. If you didn't enable the auto\-update process for the agent, you must install the agent on this EC2 instance again by following the [Installing the agent on a Windows\-based EC2 instance](inspector_installing-uninstalling-agents.md#install-windows) procedure\.
 
 1. Open the registry editor \(`regedit.exe`\)\.
 
@@ -68,15 +68,15 @@ Complete one of the following procedures:
 
 1. Double\-click on the value, and set the value to 1\.
 
-1. Enter **services\.msc**, locate the **AWS Agent Service** and the **AWS Agent Updater Service** in the **Services** window, and restart each process\. After both processes have successfully restarted, run the `AWSAgentStatus.exe` file \(see step 5 in [Starting or Stopping an Amazon Inspector Agent or Verifying That the Agent is Running](#stop-start-windows)\)\. View the status of your agent and verify that it is using the configured proxy\.
+1. Enter **services\.msc**, locate the **AWS Agent Service** and the **AWS Agent Updater Service** in the **Services** window, and restart each process\. After both processes have successfully restarted, run the `AWSAgentStatus.exe` file \(see step 5 in [Starting or stopping an Amazon Inspector agent or verifying that the agent is running](#stop-start-windows)\)\. View the status of your agent and verify that it is using the configured proxy\.
 
-## Uninstalling the Amazon Inspector Agent<a name="uninstall-windows"></a>
+## Uninstalling the Amazon Inspector agent<a name="uninstall-windows"></a>
 
 **To uninstall the agent**
 
 1. Sign in to your EC2 instance running a Windows\-based operating system where you want to uninstall the Amazon Inspector agent\.
 **Note**  
-For more information about the operating systems that are supported for Amazon Inspector, see [Amazon Inspector Supported Operating Systems and Regions](inspector_supported_os_regions.md)\.
+For more information about the operating systems that are supported for Amazon Inspector, see [Amazon Inspector supported operating systems and Regions](inspector_supported_os_regions.md)\.
 
 1. On your EC2 instance, navigate to **Control Panel**, **Add/Remove Programs**\.
 

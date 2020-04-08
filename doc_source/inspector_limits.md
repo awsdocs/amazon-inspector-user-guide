@@ -1,4 +1,4 @@
-# Amazon Inspector Service Limits<a name="inspector_limits"></a>
+# Amazon Inspector service limits<a name="inspector_limits"></a>
 
  The following table shows the Amazon Inspector limits for an AWS account\.
 

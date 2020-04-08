@@ -1,4 +1,4 @@
-# Amazon Inspector ARNS for Rules Packages<a name="inspector_rules-arns"></a>
+# Amazon Inspector ARNS for rules packages<a name="inspector_rules-arns"></a>
 
 The following tables show the ARNs for Amazon Inspector rules packages in all supported Regions\.
 

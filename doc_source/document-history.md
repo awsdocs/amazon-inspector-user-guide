@@ -1,4 +1,4 @@
-# Document History<a name="document-history"></a>
+# Document history<a name="document-history"></a>
 
 **Latest documentation update**: November 12, 2018
 
@@ -6,6 +6,7 @@ The following table describes the documentation release history of Amazon Inspec
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Security information consolidated into a new security chapter](#document-history) | Security information for Amazon Inspector, including information on managing identity and access management, is consolidated into a security chapter\. See [Security in Amazon Inspector](https://docs.aws.amazon.com/inspector/latest/userguide/security.html)\. | April 7, 2020 | 
 | [Updated documentation to remove support for the Runtime Behavior Analysis rules package\.](#document-history) | Multiple topics were updated to remove information about the Runtime Behavior Analysis rules package, which is no longer supported\. | September 5, 2019 | 
 | [Added OS Support](#document-history) | Added Amazon Inspector support for CentOS 7\.6\. For more information, see [Amazon Inspector Supported Operating Systems and Regions](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_supported_os_regions.html) and [Rules Packages Availability Across Supported Operating Systems](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_rule-packages_across_os.html)\. | December 3, 2018 | 
 | [New content](#document-history) | Added the Amazon Inspector Network Reachability rules package, which allows users to run agentless assessments that analyze network configuration for security vulnerabilities\. For more information, see [Network Reachability](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_network-reachability.html)\. | November 9, 2018 | 
@@ -18,7 +19,7 @@ The following table describes the documentation release history of Amazon Inspec
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-| New content |  Added the ability to target all Amazon EC2 instances in an account\. For more information, see [Amazon Inspector Assessment Targets](inspector_applications.md)\.   | May 24, 2018 | 
+| New content |  Added the ability to target all Amazon EC2 instances in an account\. For more information, see [Amazon Inspector assessment targets](inspector_applications.md)\.   | May 24, 2018 | 
 | Added OS support |  Added Amazon Inspector support for Amazon Linux 2018\.03 and Ubuntu 18\.04\.  | May 15, 2018 | 
 | New content |  Added ability to set up recurring Amazon Inspector assessments\.  | April 30, 2018 | 
 | New content |  Added ability to install an Amazon Inspector agent through the console\.  | April 30, 2018 | 

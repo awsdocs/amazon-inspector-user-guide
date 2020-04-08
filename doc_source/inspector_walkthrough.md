@@ -1,27 +1,27 @@
-# Amazon Inspector Tutorial \- Red Hat Enterprise Linux<a name="inspector_walkthrough"></a>
+# Amazon Inspector tutorial \- Red Hat Enterprise Linux<a name="inspector_walkthrough"></a>
 
-Before you follow the instructions in this tutorial, we recommend that you get familiar with the [Amazon Inspector Terminology and Concepts](inspector_concepts.md)\.
+Before you follow the instructions in this tutorial, we recommend that you get familiar with the [Amazon Inspector terminology and concepts](inspector_concepts.md)\.
 
 This tutorial shows how to use Amazon Inspector to analyze the behavior of an EC2 instance that runs the Red Hat Enterprise Linux 7\.5 operating system\. It provides step\-by\-step instructions on how to navigate the Amazon Inspector workflow\. The workflow includes preparing Amazon EC2 instances, running an assessment template, and performing the recommended security fixes generated in the assessment's findings\. If you are a first\-time user and would like to set up and run an Amazon Inspector assessment with one click, see [Creating a Basic Assessment](inspector_getting-started.md#inspector_basic-assessment)\.
 
 **Topics**
-+ [Step 1: Set Up an Amazon EC2 Instance to Use With Amazon Inspector](#setupinspector)
-+ [Step 2: Modify Your Amazon EC2 Instance](#prepareapplication)
-+ [Step 3: Create an Assessment Target and Install an Agent on the EC2 Instance](#createassessmenttarget)
-+ [Step 4: Create and Run Your Assessment Template](#createassessmenttemplate)
-+ [Step 5: Locate and Analyze Your Finding](#analyzefinding)
-+ [Step 6: Apply the Recommended Fix to Your Assessment Target](#upgradeapplication)
++ [Step 1: Set up an Amazon EC2 instance to use with Amazon Inspector](#setupinspector)
++ [Step 2: Modify your Amazon EC2 instance](#prepareapplication)
++ [Step 3: Create an assessment target and install an agent on the EC2 instance](#createassessmenttarget)
++ [Step 4: Create and run your assessment template](#createassessmenttemplate)
++ [Step 5: Locate and analyze your finding](#analyzefinding)
++ [Step 6: Apply the recommended fix to your assessment target](#upgradeapplication)
 
-## Step 1: Set Up an Amazon EC2 Instance to Use With Amazon Inspector<a name="setupinspector"></a>
+## Step 1: Set up an Amazon EC2 instance to use with Amazon Inspector<a name="setupinspector"></a>
 
 For this tutorial, create one EC2 instance that runs Red Hat Enterprise Linux 7\.5, and tag it using the **Name** key and a value of **InspectorEC2InstanceLinux**\.
 
 **Note**  
 For more information about tagging EC2 instances, see [Resources and Tags](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_Resources.html)\.
 
-## Step 2: Modify Your Amazon EC2 Instance<a name="prepareapplication"></a>
+## Step 2: Modify your Amazon EC2 instance<a name="prepareapplication"></a>
 
-For this tutorial, you modify your target EC2 instance to expose it to the potential security issue CVE\-2018\-1111\. For more information, see [ https://cve\.mitre\.org/cgi\-bin/cvename\.cgi?name=CVE\-2018\-1111](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1111) and [Common Vulnerabilities and Exposures](inspector_cves.md)\. 
+For this tutorial, you modify your target EC2 instance to expose it to the potential security issue CVE\-2018\-1111\. For more information, see [ https://cve\.mitre\.org/cgi\-bin/cvename\.cgi?name=CVE\-2018\-1111](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1111) and [Common vulnerabilities and exposures](inspector_cves.md)\. 
 
 Connect to your instance, **InspectorEC2InstanceLinux**, and run the following command:
 
@@ -29,7 +29,7 @@ Connect to your instance, **InspectorEC2InstanceLinux**, and run the following c
 
 For instructions on how to connect to an EC2 instance, see [Connect to Your Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-connect-to-instance-linux) in the *Amazon EC2 User Guide*\.
 
-## Step 3: Create an Assessment Target and Install an Agent on the EC2 Instance<a name="createassessmenttarget"></a>
+## Step 3: Create an assessment target and install an agent on the EC2 instance<a name="createassessmenttarget"></a>
 
 Amazon Inspector uses assessment targets to designate the AWS resources that you want to evaluate\.
 
@@ -55,14 +55,14 @@ Amazon Inspector uses assessment targets to designate the AWS resources that you
 
    1. Install an Amazon Inspector agent on your tagged EC2 instance\. To install an agent on all EC2 instances included in an assessment target, select the **Install Agents** check box\.
 **Note**  
-You can also install the Amazon Inspector agent using the [AWS Systems Manager Run Command](inspector_installing-uninstalling-agents.md#install-run-command)\. To install the agent on all instances in the assessment target, you can specify the same tags that you used when creating the assessment target\. Or you can install the Amazon Inspector agent on your EC2 instance manually\. For more information, see [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)\.
+You can also install the Amazon Inspector agent using the [AWS Systems Manager Run Command](inspector_installing-uninstalling-agents.md#install-run-command)\. To install the agent on all instances in the assessment target, you can specify the same tags that you used when creating the assessment target\. Or you can install the Amazon Inspector agent on your EC2 instance manually\. For more information, see [Installing Amazon Inspector agents](inspector_installing-uninstalling-agents.md)\.
 
    1. Choose **Save**\.
 
 **Note**  
-At this point, Amazon Inspector creates a service\-linked role called `AWSServiceRoleForAmazonInspector`\. The role grants Amazon Inspector the necessary access to your resources\. For more information, see [Creating a Service\-Linked Role for Amazon Inspector](inspector_slr.md#create-slr)\.
+At this point, Amazon Inspector creates a service\-linked role called `AWSServiceRoleForAmazonInspector`\. The role grants Amazon Inspector the necessary access to your resources\. For more information, see [Creating a service\-linked role for Amazon Inspector](inspector_slr.md#create-slr)\.
 
-## Step 4: Create and Run Your Assessment Template<a name="createassessmenttemplate"></a>
+## Step 4: Create and run your assessment template<a name="createassessmenttemplate"></a>
 
 **To create and run your template**
 
@@ -82,7 +82,7 @@ At this point, Amazon Inspector creates a service\-linked role called `AWSServic
 
 1. Choose **Create and run**\.
 
-## Step 5: Locate and Analyze Your Finding<a name="analyzefinding"></a>
+## Step 5: Locate and analyze your finding<a name="analyzefinding"></a>
 
 A completed assessment run produces a set of findings, or potential security issues that Amazon Inspector discovers in your assessment target\. You can review the findings and follow the recommended steps to resolve the potential security issues\.
 
@@ -117,7 +117,7 @@ If you don't see the new finding, choose the **Refresh** icon\.
    + Description of the finding
    + Recommended remediation steps that you can complete to fix the potential security issue described by the finding
 
-## Step 6: Apply the Recommended Fix to Your Assessment Target<a name="upgradeapplication"></a>
+## Step 6: Apply the recommended fix to your assessment target<a name="upgradeapplication"></a>
 
 For this tutorial, you modified your assessment target to expose it to the potential security issue CVE\-2018\-1111\. In this procedure, you apply the recommended fix for the issue\.
 
@@ -129,6 +129,6 @@ For this tutorial, you modified your assessment target to expose it to the poten
 
 1. On the **Assessment templates** page, choose **MyFirstTemplateLinux**, and then choose **Run** to start a new assessment run using this template\. 
 
-1. Follow the steps in [Step 5: Locate and Analyze Your Finding](#analyzefinding) to see the findings that result from this subsequent run of the **MyFirstTemplateLinux** template\.
+1. Follow the steps in [Step 5: Locate and analyze your finding](#analyzefinding) to see the findings that result from this subsequent run of the **MyFirstTemplateLinux** template\.
 
    Because you resolved the CVE\-2018\-1111 security issue, you should no longer see a finding for it\. 

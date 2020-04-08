@@ -1,36 +1,36 @@
-# Amazon Inspector Tutorial \- Ubuntu Server<a name="inspector_walkthrough_ubuntu"></a>
+# Amazon Inspector tutorial \- Ubuntu Server<a name="inspector_walkthrough_ubuntu"></a>
 
-Before you follow the instructions in this tutorial, we recommend that you get familiar with the [Amazon Inspector Terminology and Concepts](inspector_concepts.md)\.
+Before you follow the instructions in this tutorial, we recommend that you get familiar with the [Amazon Inspector terminology and concepts](inspector_concepts.md)\.
 
 This tutorial shows how to use Amazon Inspector to analyze the behavior of an EC2 instance that runs the Ubuntu Server 16\.04 LTS operating system\. It provides step\-by\-step instructions on how to navigate the Amazon Inspector workflow\. This includes preparing an Amazon EC2 instance, to running an assessment template, to performing a recommended security fix generated in the assessment's findings\. 
 
 If you are a first\-time user and would like to set up and run an Amazon Inspector assessment with one click, see [Creating a Basic Assessment](inspector_getting-started.md#inspector_basic-assessment)\.
 
 **Topics**
-+ [Step 1: Set Up an Amazon EC2 Instance to Use With Amazon Inspector](#setupinspector_ubuntu)
-+ [Step 2: Modify Your Amazon EC2 Instance](#prepareapplication_ubuntu)
-+ [Step 3: Create an Assessment Target and Install an Agent on the EC2 Instance](#createassessmenttarget_ubuntu)
-+ [Step 4: Create and Run Your Assessment Template](#createassessmenttemplate_ubuntu)
-+ [Step 5: Locate and Analyze Generated Findings](#analyzefinding_ubuntu)
-+ [Step 6: Apply the Recommended Fix to Your Assessment Target](#upgradeapplication_ubuntu)
++ [Step 1: Set up an Amazon EC2 instance to use with Amazon Inspector](#setupinspector_ubuntu)
++ [Step 2: Modify your Amazon EC2 instance](#prepareapplication_ubuntu)
++ [Step 3: Create an assessment target and install an agent on the EC2 instance](#createassessmenttarget_ubuntu)
++ [Step 4: Create and run your assessment template](#createassessmenttemplate_ubuntu)
++ [Step 5: Locate and analyze generated findings](#analyzefinding_ubuntu)
++ [Step 6: Apply the recommended fix to your assessment target](#upgradeapplication_ubuntu)
 
-## Step 1: Set Up an Amazon EC2 Instance to Use With Amazon Inspector<a name="setupinspector_ubuntu"></a>
+## Step 1: Set up an Amazon EC2 instance to use with Amazon Inspector<a name="setupinspector_ubuntu"></a>
 
 **To set up an EC2 instance**
 + For this tutorial, create one EC2 instance running Ubuntu Server 16\.04 LTS and tag it using the **Name** key and a value of **InspectorEC2InstanceUbuntu**\.
 **Note**  
 For more information about tagging EC2 instances, see [ Resources and Tags](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_Resources.html)\.
 
-## Step 2: Modify Your Amazon EC2 Instance<a name="prepareapplication_ubuntu"></a>
+## Step 2: Modify your Amazon EC2 instance<a name="prepareapplication_ubuntu"></a>
 
-For this tutorial, you modify your target EC2 instance to expose it to the potential security issue CVE\-2017\-6507\. For more information, see [ https://cve\.mitre\.org/cgi\-bin/cvename\.cgi?name=CVE\-2017\-6507](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6507) and [Common Vulnerabilities and Exposures](inspector_cves.md)\. 
+For this tutorial, you modify your target EC2 instance to expose it to the potential security issue CVE\-2017\-6507\. For more information, see [ https://cve\.mitre\.org/cgi\-bin/cvename\.cgi?name=CVE\-2017\-6507](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6507) and [Common vulnerabilities and exposures](inspector_cves.md)\. 
 
 **To modify your EC2 instance**
 + Connect to your instance **InspectorEC2InstanceUbuntu** that you created in the preceding section, and run the following command:
 
   `sudo apt-get install apparmor=2.10.95-0ubuntu2.5`
 
-## Step 3: Create an Assessment Target and Install an Agent on the EC2 Instance<a name="createassessmenttarget_ubuntu"></a>
+## Step 3: Create an assessment target and install an agent on the EC2 instance<a name="createassessmenttarget_ubuntu"></a>
 
 Amazon Inspector uses assessment targets to designate the AWS resources to evaluate\.
 
@@ -52,14 +52,14 @@ Amazon Inspector uses assessment targets to designate the AWS resources to evalu
 
 1. Install an Amazon Inspector Agent on your tagged EC2 instance\. To install an agent on all EC2 instances included in an assessment target, select the **Install Agents** box\.
 **Note**  
-You can also install the Amazon Inspector Agent using the [Systems Manager Run Command](inspector_installing-uninstalling-agents.md#install-run-command)\. To install the agent on all instances in the assessment target, you can specify the same tags used for creating the assessment target\. Or you can install the Amazon Inspector Agent on your EC2 instance manually\. For more information, see [Installing Amazon Inspector Agents](inspector_installing-uninstalling-agents.md)\.
+You can also install the Amazon Inspector Agent using the [Systems Manager Run Command](inspector_installing-uninstalling-agents.md#install-run-command)\. To install the agent on all instances in the assessment target, you can specify the same tags used for creating the assessment target\. Or you can install the Amazon Inspector Agent on your EC2 instance manually\. For more information, see [Installing Amazon Inspector agents](inspector_installing-uninstalling-agents.md)\.
 
 1. Choose **Save**\.
 
 **Note**  
-At this point, a service\-linked role called `AWSServiceRoleForAmazonInspector` is created to grant Amazon Inspector access to your resources\. For more information, see [Creating a Service\-Linked Role for Amazon Inspector](inspector_slr.md#create-slr)\.
+At this point, a service\-linked role called `AWSServiceRoleForAmazonInspector` is created to grant Amazon Inspector access to your resources\. For more information, see [Creating a service\-linked role for Amazon Inspector](inspector_slr.md#create-slr)\.
 
-## Step 4: Create and Run Your Assessment Template<a name="createassessmenttemplate_ubuntu"></a>
+## Step 4: Create and run your assessment template<a name="createassessmenttemplate_ubuntu"></a>
 
 **To create and run your template**
 
@@ -79,7 +79,7 @@ At this point, a service\-linked role called `AWSServiceRoleForAmazonInspector` 
 
 1. If you are using **Advanced setup**, choose **Next**\. On the following **Review** page, choose **Create**\. Otherwise, choose **Create and run**\.
 
-## Step 5: Locate and Analyze Generated Findings<a name="analyzefinding_ubuntu"></a>
+## Step 5: Locate and analyze generated findings<a name="analyzefinding_ubuntu"></a>
 
 A completed assessment run produces a set of findings, or potential security issues that Amazon Inspector discovers in your assessment target\. You can review the findings and follow the recommended steps to resolve the potential security issues\.
 
@@ -112,7 +112,7 @@ If you don't see the new finding, choose the **Refresh** icon\.
    + Description of the finding
    + Recommended remediation steps that you can complete to fix the potential security issue described by the finding
 
-## Step 6: Apply the Recommended Fix to Your Assessment Target<a name="upgradeapplication_ubuntu"></a>
+## Step 6: Apply the recommended fix to your assessment target<a name="upgradeapplication_ubuntu"></a>
 
 For this tutorial, you modified your assessment target to expose it to a potential security issue **CVE\-2017\-6507**\. In this procedure, you apply the recommended fix for the issue\.
 
@@ -122,6 +122,6 @@ For this tutorial, you modified your assessment target to expose it to a potenti
 
 1. On the **Assessment templates** page, choose **MyFirstTemplateUbuntu**, and then choose **Run** to start a new run using this template\. 
 
-1. Follow the steps in [Step 5: Locate and Analyze Generated Findings](#analyzefinding_ubuntu) to see the findings that result from this subsequent run of the **MyFirstTemplateUbuntu** template\.
+1. Follow the steps in [Step 5: Locate and analyze generated findings](#analyzefinding_ubuntu) to see the findings that result from this subsequent run of the **MyFirstTemplateUbuntu** template\.
 
    Because you resolved the **CVE\-2017\-6507** security issue, you should no longer see a finding for it\. 

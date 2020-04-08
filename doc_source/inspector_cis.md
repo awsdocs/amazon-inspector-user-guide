@@ -60,4 +60,4 @@ Amazon Inspector currently provides the following CIS Certified rules packages t
 
 If a specific CIS benchmark appears in a finding that is produced by an Amazon Inspector assessment run, you can download a detailed PDF description of the benchmark from [https://benchmarks\.cisecurity\.org/](https://benchmarks.cisecurity.org/) \(free registration required\)\. The benchmark document provides detailed information about this CIS benchmark, its severity, and how to mitigate it\. 
 
-For more information, see [Amazon Inspector Rules Packages for Supported Operating Systems](inspector_rule-packages_across_os.md)\.
+For more information, see [Amazon Inspector rules packages for supported operating systems](inspector_rule-packages_across_os.md)\.

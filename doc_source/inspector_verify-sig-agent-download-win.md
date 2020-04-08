@@ -1,4 +1,4 @@
-# \(Optional\) Verify the Signature of the Amazon Inspector Agent Installation Script on Windows\-based Operating Systems<a name="inspector_verify-sig-agent-download-win"></a>
+# \(Optional\) Verify the signature of the Amazon Inspector agent installation script on Windows\-based operating systems<a name="inspector_verify-sig-agent-download-win"></a>
 
 This topic describes the recommended process of verifying the validity of the Amazon Inspector agent's installations script for Windows\-based operating systems\. 
 

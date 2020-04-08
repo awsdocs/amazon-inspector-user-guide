@@ -14,9 +14,9 @@ An Amazon Inspector agent is not required to assess your EC2 instances with this
 **Important**  
 This rules package does not support Amazon EC2 Classic networks\.
 
-For more information, see [Amazon Inspector Rules Packages for Supported Operating Systems](inspector_rule-packages_across_os.md)\.
+For more information, see [Amazon Inspector rules packages for supported operating systems](inspector_rule-packages_across_os.md)\.
 
-## Configurations Analyzed<a name="inspector_network-reachability-configurations"></a>
+## Configurations analyzed<a name="inspector_network-reachability-configurations"></a>
 
 Network Reachability rules analyze the configuration of the following entities for vulnerabilities:
 + [Amazon EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
@@ -36,14 +36,14 @@ Network Reachability rules analyze the configuration of the following entities f
 **Important**  
 The Network Reachability rules package does not account for any other constructs that allow or restrict inbound access\.
 
-## Reachability Routes<a name="inspector_network-reachability-Types"></a>
+## Reachability routes<a name="inspector_network-reachability-Types"></a>
 
 Network Reachability rules check for the following reachability routes, which correspond to the ways in which your ports can be accessed from outside of your VPC:
 + **`Internet`** \- Internet gateways \(including Application Load Balancers and Classic Load Balancers\)
 + **`PeeredVPC`** \- VPC peering connections
 + **`VGW`** \- Virtual private gateways
 
-## Findings Types<a name="inspector_network-reachability-types"></a>
+## Findings types<a name="inspector_network-reachability-types"></a>
 
 An assessment that includes the Network Reachability rules package can return the following types of findings for each reachability route:
 + [`RecognizedPort`](#inspector_network-reachability-types-1)

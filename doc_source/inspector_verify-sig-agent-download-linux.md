@@ -1,4 +1,4 @@
-# \(Optional\) Verify the Signature of the Amazon Inspector Agent Installation Script on Linux\-based Operating Systems<a name="inspector_verify-sig-agent-download-linux"></a>
+# \(Optional\) Verify the signature of the Amazon Inspector agent installation script on Linux\-based operating systems<a name="inspector_verify-sig-agent-download-linux"></a>
 
 This topic describes the recommended process of verifying the validity of the Amazon Inspector agent's installations script for Linux\-based operating systems\. 
 
@@ -11,11 +11,11 @@ Amazon Inspector agent files for Linux\-based operating systems are signed using
 The first step is to establish trust with the software publisher\. Download the public key of the software publisher, check that the owner of the public key is who they claim to be, and then add the public key to your *keyring*\. Your keyring is a collection of known public keys\. After you establish the authenticity of the public key, you can use it to verify the signature of the application\.
 
 **Topics**
-+ [Installing the GPG Tools](#inspector_verify-signature-of-agent-download-install-tools)
-+ [Authenticating and Importing the Public Key](#inspector_verify-signature-of-agent-download-authenticate-import-public-key)
-+ [Verify the Signature of the Package](#inspector_verify-signature-of-agent-package)
++ [Installing the GPG tools](#inspector_verify-signature-of-agent-download-install-tools)
++ [Authenticating and importing the public key](#inspector_verify-signature-of-agent-download-authenticate-import-public-key)
++ [Verify the signature of the package](#inspector_verify-signature-of-agent-package)
 
-## Installing the GPG Tools<a name="inspector_verify-signature-of-agent-download-install-tools"></a>
+## Installing the GPG tools<a name="inspector_verify-signature-of-agent-download-install-tools"></a>
 
 If your operating system is Linux or Unix, the GPG tools are likely already installed\. To test whether the tools are installed on your system, type gpg at a command prompt\. If the GPG tools are installed, you see a GPG command prompt\. If the GPG tools are not installed, you see an error stating that the command cannot be found\. You can install the GnuPG package from a repository\. 
 
@@ -25,7 +25,7 @@ If your operating system is Linux or Unix, the GPG tools are likely already inst
 **To install GPG tools on Red Hat–based Linux**
 + From a terminal, run the following command: yum install gnupg\.
 
-## Authenticating and Importing the Public Key<a name="inspector_verify-signature-of-agent-download-authenticate-import-public-key"></a>
+## Authenticating and importing the public key<a name="inspector_verify-signature-of-agent-download-authenticate-import-public-key"></a>
 
 The next step in the process is to authenticate the Amazon Inspector public key and add it as a trusted key in your `GPG` keyring\.
 
@@ -99,7 +99,7 @@ The next step in the process is to authenticate the Amazon Inspector public key 
 
    Additionally, the fingerprint string should be identical to `DDA0 D4C5 10AE 3C20 6F46 6DC0 2474 0960 5836 0418`, as shown in the preceding example\. Compare the key fingerprint that is returned to the one published on this page\. They should match\. If they don't match, don't install the Amazon Inspector agent installation script, and contact AWS Support\. 
 
-## Verify the Signature of the Package<a name="inspector_verify-signature-of-agent-package"></a>
+## Verify the signature of the package<a name="inspector_verify-signature-of-agent-package"></a>
 
 After you install the `GPG` tools, authenticate and import the Amazon Inspector public key, and verify that the public key is trusted, you are ready to verify the signature of the installation script\. 
 
@@ -108,7 +108,7 @@ After you install the `GPG` tools, authenticate and import the Amazon Inspector 
 1. At a command prompt, run the following command to download the signature file for the installation script:
 
    ```
-   curl -O https://d1wk0tztpsntt1.cloudfront.net/linux/latest/install.sig
+   curl -O https://inspector-agent.amazonaws.com/linux/latest/install.sig
    ```
 
 1. Verify the signature by running the following command at a command prompt in the directory where you saved `install.sig` and the Amazon Inspector installation file\. Both files must be present\.

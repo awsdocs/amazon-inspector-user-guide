@@ -1,4 +1,4 @@
-# Assessment Reports<a name="inspector_reports"></a>
+# Assessment reports<a name="inspector_reports"></a>
 
 An Amazon Inspector *assessment report* is a document that details what is tested in the assessment run and the results of the assessment\. You can store the reports, share them with your team for remediation actions, or use them to augment your compliance audit data\. You can generate a report for an assessment run after the run has successfully completed\. 
 
