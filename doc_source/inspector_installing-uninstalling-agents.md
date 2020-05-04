@@ -33,17 +33,17 @@ To use this option, make sure that your EC2 instance has the SSM Agent installed
 
 **To install the agent on multiple EC2 instances using the Systems Manager Run Command**
 
-1. Open the Amazon EC2 console at [https://console\.aws\.amazon\.com/ec2/](https://console.aws.amazon.com/ec2/)\. 
+1. Open the AWS Systems Manager console at [https://console\.aws\.amazon\.com/systems\-manager/](https://console.aws.amazon.com/systems-manager/)\.
 
-1. In the navigation pane under **Systems Manager Services**, choose **Run Command**\. 
+1. In the navigation pane under **Instances & nodes**, choose **Run Command**\. 
 
 1. Choose **Run a command**\.
 
 1. For **Command document**, choose the document named **AmazonInspector\-ManageAWSAgent** that is owned by **Amazon**\. This document contains the script for installing the Amazon Inspector agent on EC2 instances\.
 
-1. For **Select targets by**, specify your EC2 instances either by choosing the **Specifying a Tag** option or by choosing **Manually Selecting Instances**\. Then choose **Select instances**\. To install the agent on all the instances in the assessment target, you can specify the same tags that are used for creating the assessment target\. 
+1. For **Targets**, you can select EC2 instances using different methods\. To install the agent on all of the instances in the assessment target, you can specify the tags that were used to create the assessment target\.
 
-1. Provide your choices for the rest of the available options using the instructions in [Executing Commands from the EC2 Console](http://docs.aws.amazon.com/systems-manager/latest/userguide/rc-console.html), and then choose **Run**\.
+1. Provide your choices for the rest of the available options using the instructions in [Running commands from the console](https://docs.aws.amazon.com/systems-manager/latest/userguide/rc-console.html), and then choose **Run**\.
 
 **Note**  
 You can also install the agent on multiple EC2 instances \(both Linux\-based and Windows\-based\) when you create an assessment target, or you can use the **Install Agents with Run Command** button for an existing target\. For more information, see [Creating an assessment target](inspector_applications.md#create_application_via_console)\. 

@@ -41,7 +41,7 @@ We highly recommend that you modify the `agent.cfg` file only with the guidance 
 
 ## Configuring proxy support for an Amazon Inspector agent<a name="inspector-agent-proxy"></a>
 
-To get proxy support for an agent on a Windows\-based operating system, use the `WinHTTP` proxy\. To set up the `WinHTTP` proxy using the `netsh` utility, see [https://technet\.microsoft\.com/en\-us/library/cc731131%28v=ws\.10%29\.aspx](https://technet.microsoft.com/en-us/library/cc731131%28v=ws.10%29.aspx)\.
+To get proxy support for an agent on a Windows\-based operating system, use the `WinHTTP` proxy\. To set up the `WinHTTP` proxy using the `netsh` utility, see [Netsh Commands for Windows Hypertext Transfer Protocol \(WINHTTP\)](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10))\.
 
 **Important**  
 Only HTTPS proxies are supported for Windows\-based instances\.

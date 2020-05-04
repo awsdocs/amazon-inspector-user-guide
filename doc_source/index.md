@@ -62,4 +62,4 @@ Amazon's trademarks and trade dress may not be used in
    + [ARNs for Amazon Inspector resources](inspector-arns-resources.md)
    + [Amazon Inspector ARNS for rules packages](inspector_rules-arns.md)
 + [Document history](document-history.md)
-+ [AWS Glossary](glossary.md)
++ [AWS glossary](glossary.md)

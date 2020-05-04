@@ -11,7 +11,7 @@ For more information about supported operating systems, see [Amazon Inspector su
 
 | Supported Operating Systems | Common Vulnerabilities and Exposures | CIS Benchmarks | Network Reachability | Security Best Practices | Runtime Behavior Analysis | 
 | --- | --- | --- | --- | --- | --- | 
-|  Amazon Linux 2 LTS, 2017\.12  |  Supported  | Supported |  Supported  |  Supported  |  Deprecated  | 
+|  Amazon Linux 2  |  Supported  | Supported |  Supported  |  Supported  |  Deprecated  | 
 |  Amazon Linux 2018\.03  |  Supported  | Supported |  Supported  |  Supported  |  Deprecated  | 
 |  Amazon Linux 2017\.09  |  Supported  | Supported |  Supported  |  Supported  |  Deprecated  | 
 |  Amazon Linux 2017\.03  |  Supported  | Supported |  Supported  |  Supported  |  Deprecated  | 
