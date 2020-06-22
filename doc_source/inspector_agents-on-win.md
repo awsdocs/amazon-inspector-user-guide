@@ -3,7 +3,7 @@
 You can start, stop, and modify the behavior of Amazon Inspector agents\. Sign in to your EC2 instance running a Windows\-based operating system and perform any of the procedures in this chapter\. For more information about the operating systems that are supported for Amazon Inspector, see [Amazon Inspector supported operating systems and Regions](inspector_supported_os_regions.md)\.
 
 **Important**  
-The Amazon Inspector agent relies on Amazon EC2 instance metadata to function correctly\. It accesses instance metadata using version 1 of the Instance Metadata Service \(IMDSv1\)\. See [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) to learn more about EC2 instance metadata and access methods\. If you attach a resource policy that enforces IMDSv2 only access, then the Inspector agent will not function correctly\. In this case, the Inspector service will report the agent’s status as unhealthy and will be unable to assess the instance\.
+The Amazon Inspector agent relies on Amazon EC2 instance metadata to function correctly\. It accesses instance metadata using version 1 or version 2 of the Instance Metadata Service \(IMDSv1or IMDSv2\)\. See [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) to learn more about EC2 instance metadata and access methods\.
 
 **Note**  
 The commands in this chapter function in all AWS Regions that are supported by Amazon Inspector\.

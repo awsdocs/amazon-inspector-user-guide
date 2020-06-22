@@ -3,10 +3,10 @@
 You can use Amazon Inspector to evaluate whether your AWS assessment targets \(your collections of AWS resources\) have potential security issues that you should address\. 
 
 **Important**  
-Currently, your assessment targets can consist only of EC2 instances that run on supported operating systems\. For information about supported operating systems and supported AWS Regions, see [Amazon Inspector service limits](inspector_limits.md)\. 
+Currently, your assessment targets can consist only of EC2 instances that run on supported operating systems\. For information about supported operating systems and supported AWS Regions, see [Amazon Inspector supported operating systems and Regions](inspector_supported_os_regions.md)\. 
 
 **Note**  
-For information about launching EC2 instances, see [ Amazon Elastic Compute Cloud Documentation](https://aws.amazon.com/documentation/ec2/)\. 
+For information about launching EC2 instances, see the [ Amazon Elastic Compute Cloud documentation](https://aws.amazon.com/documentation/ec2/)\. 
 
 **Topics**
 + [Tagging resources to create an assessment target](#tagging)

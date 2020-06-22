@@ -8,7 +8,7 @@ For more information about how to install, uninstall, and reinstall the agent, h
 An Amazon Inspector agent is not required to run the [Network Reachability](inspector_network-reachability.md) rules package\.
 
 **Important**  
-The Amazon Inspector agent relies on Amazon EC2 instance metadata to function correctly\. It accesses instance metadata using version 1 of the Instance Metadata Service \(IMDSv1\)\. See [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) to learn more about EC2 instance metadata and access methods\. If you attach a resource policy that enforces IMDSv2 only access, then the Inspector agent will not function correctly\. In this case, the Inspector service reports the agent’s status as unhealthy and will be unable to assess the instance\.
+The Amazon Inspector agent relies on Amazon EC2 instance metadata to function correctly\. It accesses instance metadata using version 1 or version 2 of the Instance Metadata Service \(IMDSv1 or IMDSv2\)\. See [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) to learn more about EC2 instance metadata and access methods\.
 
 **Topics**
 + [Amazon Inspector agent privileges](#agent-privileges)
