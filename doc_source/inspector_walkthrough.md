@@ -26,6 +26,7 @@ For this tutorial, you modify your target EC2 instance to expose it to the poten
 Connect to your instance, **InspectorEC2InstanceLinux**, and run the following command:
 
 `sudo yum install dhclient-12:4.2.5-68.el7 `
+Not working
 
 For instructions on how to connect to an EC2 instance, see [Connect to Your Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-connect-to-instance-linux) in the *Amazon EC2 User Guide*\.
 
