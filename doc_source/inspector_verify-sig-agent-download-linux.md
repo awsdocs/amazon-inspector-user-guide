@@ -33,7 +33,7 @@ The next step in the process is to authenticate the Amazon Inspector public key 
 
 1. Obtain a copy of our public `GPG` build key by doing one of the following:
    + Download from [https://d1wk0tztpsntt1\.cloudfront\.net/linux/latest/inspector\.gpg](https://d1wk0tztpsntt1.cloudfront.net/linux/latest/inspector.gpg)\.
-   + Copy the key from the following text and paste it into a file called `inspector.key`\. Make sure to include everything that follows:
+   + Copy the key from the following text and paste it into a file called `inspector.gpg`\. Make sure to include everything that follows:
 
      ```
      -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -67,10 +67,10 @@ The next step in the process is to authenticate the Amazon Inspector public key 
      -----END PGP PUBLIC KEY BLOCK-----
      ```
 
-1. At a command prompt in the directory where you saved **inspector\.key**, use the following command to import the Amazon Inspector public key into your keyring:
+1. At a command prompt in the directory where you saved **inspector\.gpg**, use the following command to import the Amazon Inspector public key into your keyring:
 
    ```
-   gpg --import inspector.key
+   gpg --import inspector.gpg
    ```
 
    The command returns results that are similar to the following:
