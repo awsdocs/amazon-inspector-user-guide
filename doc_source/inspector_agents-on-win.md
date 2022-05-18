@@ -50,7 +50,7 @@ Complete one of the following procedures:
 
 **To install an agent on an EC2 instance that uses a proxy server**
 
-1. Download the following \.exe file: `https://d1wk0tztpsntt1.cloudfront.net/windows/installer/latest/AWSAgentInstall.exe`\.
+1. Download the following \.exe file: `https://inspector-agent.amazonaws.com/windows/installer/latest/AWSAgentInstall.exe`\.
 
 1. Open a command prompt window or PowerShell window \(using administrative permissions\)\. Navigate to the location where you saved the downloaded `AWSAgentInstall.exe`, and then run the following command:
 
