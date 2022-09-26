@@ -5,8 +5,8 @@ In Amazon Inspector, the primary resources are resource groups, assessment targe
 
 | Resource Type | ARN Format  | 
 | --- | --- | 
-| Resource group |  `arn:aws:inspector:region:account-id:resourcegroup/ID`  | 
-| Assessment target |  `arn:aws:inspector:region:account-id:target/ID `  | 
-| Assessment template |  `arn:aws:inspector:region:account-id:target/ID:template:ID`  | 
-| Assessment run |  `arn:aws:inspector:region:account-id:target/ID/template/ID/run/ID`  | 
-| Finding |  `arn:aws:inspector:region:account-id:target/ID/template/ID/run/ID/finding/ID`  | 
+| Resource group |  `arn:partition:inspector:region:account-id:resourcegroup/ID`  | 
+| Assessment target |  `arn:partition:inspector:region:account-id:target/ID `  | 
+| Assessment template |  `arn:partition:inspector:region:account-id:target/ID:template:ID`  | 
+| Assessment run |  `arn:partition:inspector:region:account-id:target/ID/template/ID/run/ID`  | 
+| Finding |  `arn:partition:inspector:region:account-id:target/ID/template/ID/run/ID/finding/ID`  | 
